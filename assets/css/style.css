@@ -325,6 +325,7 @@ p {
   padding: 5rem 0;
   text-align: center;
   overflow: hidden;
+  width: 100%;
   aspect-ratio: 16 / 9;
   min-height: 500px;
   display: flex;
