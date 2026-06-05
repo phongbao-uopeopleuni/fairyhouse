@@ -31,6 +31,8 @@ export default defineConfig(() => {
           dia_diem_du_lich: path.resolve(__dirname, 'bai-viet/dia-diem-du-lich-gan-fairys-house-hue.html'),
           an_gi_o_hue: path.resolve(__dirname, 'bai-viet/an-gi-o-hue.html'),
           kinh_nghiem_dat_homestay: path.resolve(__dirname, 'bai-viet/kinh-nghiem-dat-homestay-o-hue.html'),
+          top_dia_diem_an_uong: path.resolve(__dirname, 'bai-viet/top-dia-diem-an-uong-google-review-hue.html'),
+          top_quan_ca_phe: path.resolve(__dirname, 'bai-viet/top-quan-ca-phe-muoi-va-dep-o-hue.html'),
           error_404: path.resolve(__dirname, '404.html'),
           // English (ENG) version files
           main_en: path.resolve(__dirname, 'en/index.html'),
@@ -43,6 +45,8 @@ export default defineConfig(() => {
           dia_diem_du_lich_en: path.resolve(__dirname, 'en/bai-viet/dia-diem-du-lich-gan-fairys-house-hue.html'),
           an_gi_o_hue_en: path.resolve(__dirname, 'en/bai-viet/an-gi-o-hue.html'),
           kinh_nghiem_dat_homestay_en: path.resolve(__dirname, 'en/bai-viet/kinh-nghiem-dat-homestay-o-hue.html'),
+          top_dia_diem_an_uong_en: path.resolve(__dirname, 'en/bai-viet/top-rated-hue-restaurants-google-reviews.html'),
+          top_quan_ca_phe_en: path.resolve(__dirname, 'en/bai-viet/best-salt-coffee-and-cafes-in-hue.html'),
           error_404_en: path.resolve(__dirname, 'en/404.html'),
         },
       },
