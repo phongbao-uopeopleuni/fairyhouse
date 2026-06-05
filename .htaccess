@@ -1,0 +1,60 @@
+# .htaccess rules for Fairy's House Huế
+# Designed by Web Performance & SEO Engineers
+
+# Prevent directory listings
+Options -Indexes
+
+# Custom 404 page mapping
+ErrorDocument 404 /404.html
+
+# Cache-Control headers for Web Performance
+<IfModule mod_expires.c>
+    ExpiresActive On
+    
+    # Fonts
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType font/woff "access plus 1 year"
+    
+    # Images (WebP, SVG, JPG, PNG)
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/x-icon "access plus 1 year"
+    
+    # CSS / JS
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+</IfModule>
+
+# Force HTTPS and www canonical domain redirection
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Force HTTPS Redirection
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+    
+    # Canonize to www.fairyshousehue.vn
+    RewriteCond %{HTTP_HOST} !^www\. [NC]
+    RewriteRule ^(.*)$ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# Enhanced HTTP Security Headers for Cybersecurity Compliance
+<IfModule mod_headers.c>
+    # Prevent clickjacking attacks by forbidding framing of pages outside of same origin
+    Header set X-Frame-Options "SAMEORIGIN"
+    
+    # Block MIME type sniffing attacks by enforcing rigid content type matching
+    Header set X-Content-Type-Options "nosniff"
+    
+    # Enable legacy browser cross-site scripting (XSS) filter mechanisms
+    Header set X-XSS-Protection "1; mode=block"
+    
+    # Minimize referrer leakage to third-parties to safeguard user privacy
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+    
+    # Optional: Force HTTP Strict Transport Security (HSTS) if hosting supports it natively
+    # Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+</IfModule>
+

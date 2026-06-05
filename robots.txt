@@ -1,0 +1,10 @@
+# Robots.txt for Fairy's House Huế Homestay Website
+# Optimized for Local SEO & Google Bot crawl budgets
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+# Sitemap Linkage
+Sitemap: https://www.fairyshousehue.vn/sitemap.xml

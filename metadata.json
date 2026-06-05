@@ -1,0 +1,6 @@
+{
+  "name": "Fairy's House Huế",
+  "description": "Website giới thiệu và đặt phòng cho homestay Fairy’s House Huế tại 19 Lương Văn Can, Phường An Cựu, TP Huế.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
