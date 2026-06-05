@@ -1353,11 +1353,21 @@ textarea.form-input {
     z-index: 105;
   }
   
-  .nav-menu.active {
-    left: 0;
-  }
-  
-  .nav-menu__link {
+    .nav-menu.active {
+      left: 0;
+    }
+    
+    .menu-toggle.active span:nth-child(1) {
+      transform: translateY(9px) rotate(45deg);
+    }
+    .menu-toggle.active span:nth-child(2) {
+      opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+      transform: translateY(-9px) rotate(-45deg);
+    }
+    
+    .nav-menu__link {
     font-size: 1.15rem;
     padding: 0.75rem 0;
     display: block;
@@ -1386,7 +1396,20 @@ textarea.form-input {
 }
 
 /* Interactive Gallery styling for house content */
+.gallery-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
 .gallery-tab-btn {
+  padding: 0.6rem 1.5rem;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 0.9rem;
   box-shadow: 0 2px 4px rgba(139, 94, 60, 0.04);
 }
 .gallery-tab-btn:hover {
@@ -1540,6 +1563,23 @@ textarea.form-input {
     margin-right: 0;
     gap: 0.35rem;
   }
+  
+  .gallery-tabs {
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0.5rem;
+    scrollbar-width: none;
+  }
+  .gallery-tabs::-webkit-scrollbar {
+    display: none;
+  }
+  .gallery-tab-btn {
+    white-space: nowrap;
+    flex: 0 0 auto;
+  }
+  
   .nav-menu__socials {
     margin-top: 1.5rem;
     padding-top: 1rem;
