@@ -244,14 +244,17 @@ p {
 
 /* Header Buttons */
 .btn {
-  display: inline-block;
-  padding: 0.75rem 1.75rem;
-  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 2.25rem;
+  font-weight: 500;
   font-size: 0.95rem;
-  border-radius: 6px;
+  letter-spacing: 0.02em;
+  border-radius: 50px;
   text-align: center;
   cursor: pointer;
-  transition: var(--transition-fast);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn--primary {
@@ -370,8 +373,9 @@ p {
 
 .hero__ctas {
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1.25rem;
   align-items: center;
   justify-content: center;
 }
