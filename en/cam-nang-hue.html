@@ -96,18 +96,18 @@
           }
         </style>
 
-        <div class="category-filters" style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; margin-bottom: 4rem;">
+        <div class="category-filters">
           <button class="filter-btn filter-btn--active" data-filter="all" style="padding: 0.65rem 1.5rem; border-radius: 50px; border: 1px solid rgba(0,0,0,0.15); background-color: transparent; color: var(--color-primary); cursor: pointer; font-family: var(--font-sans); font-weight: 500; transition: all 0.25s ease;">All Guides & Tips</button>
           <button class="filter-btn" data-filter="quan-an" style="padding: 0.65rem 1.5rem; border-radius: 50px; border: 1px solid rgba(0,0,0,0.15); background-color: transparent; color: var(--color-primary); cursor: pointer; font-family: var(--font-sans); font-weight: 500; transition: all 0.25s ease;">🍲 Food & Dining</button>
           <button class="filter-btn" data-filter="vui-choi" style="padding: 0.65rem 1.5rem; border-radius: 50px; border: 1px solid rgba(0,0,0,0.15); background-color: transparent; color: var(--color-primary); cursor: pointer; font-family: var(--font-sans); font-weight: 500; transition: all 0.25s ease;">🏰 Attractions & Sights</button>
           <button class="filter-btn" data-filter="ca-phe" style="padding: 0.65rem 1.5rem; border-radius: 50px; border: 1px solid rgba(0,0,0,0.15); background-color: transparent; color: var(--color-primary); cursor: pointer; font-family: var(--font-sans); font-weight: 500; transition: all 0.25s ease;">☕ Coffee Shops & Cafes</button>
         </div>
 
-        <div class="cam-nang-list" id="cam-nang-list" style="display: flex; flex-direction: column; gap: 4rem;">
+        <div class="blog-list cam-nang-list" id="cam-nang-list">
           
           <!-- Article 1 -->
-          <article class="blog-showcase" data-category="vui-choi" style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 3.5rem; align-items: center;">
-            <div class="blog-showcase__img-box" style="border-radius: 8px; overflow: hidden; height: 350px;">
+          <article class="blog-showcase" data-category="vui-choi">
+            <div class="blog-showcase__img-box">
               <img 
                 src="/bai-viet/z7905090831053_0421a7edae07a83a7f086761119e8537.jpg" 
                 alt="Top local Hue places near our cozy homestay" 
@@ -124,14 +124,14 @@
           </article>
 
           <!-- Article 2 -->
-          <article class="blog-showcase" data-category="quan-an" style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 3.5rem; align-items: center; border-top: 1px solid rgba(0,0,0,0.06); padding-top: 4rem;">
+          <article class="blog-showcase blog-showcase--reverse blog-showcase--divided" data-category="quan-an">
             <div class="blog-showcase__content">
               <span class="text-muted" style="font-size: 0.85rem; display: block; margin-bottom: 0.5rem; font-weight: 500;">LOCAL CUISINE • 6-MIN READ</span>
               <h2 style="font-size: 1.65rem; line-height: 1.3; margin-bottom: 1rem;">Must-try Hue dishes & hidden local eateries</h2>
               <p class="text-muted" style="line-height: 1.6; margin-bottom: 1.5rem;">Master the art of eating Hue foods! From piping hot Tapioca cakes (Bánh lọc) and Baby clam rice (Cơm hến) to local Hue Beef Soup (Bún Bò Huế). We compiled direct address locations of top-tier local family diners favored primarily by residents.</p>
               <a href="/en/bai-viet/an-gi-o-hue.html" class="btn btn--secondary" style="align-self: flex-start;">Read full post</a>
             </div>
-            <div class="blog-showcase__img-box" style="border-radius: 8px; overflow: hidden; height: 350px;">
+            <div class="blog-showcase__img-box">
               <img 
                 src="/bai-viet/am-thuc-hue-5-1024x683.jpg" 
                 alt="Excellent local specialty dishes in Hue" 
@@ -143,8 +143,8 @@
           </article>
 
           <!-- Article 3 -->
-          <article class="blog-showcase" data-category="vui-choi" style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 3.5rem; align-items: center; border-top: 1px solid rgba(0,0,0,0.06); padding-top: 4rem;">
-            <div class="blog-showcase__img-box" style="border-radius: 8px; overflow: hidden; height: 350px;">
+          <article class="blog-showcase blog-showcase--divided" data-category="vui-choi">
+            <div class="blog-showcase__img-box">
               <img 
                 src="/bai-viet/z7905080926702_f53e4ee90402123389e1d85db128f137.jpg" 
                 alt="Cozy lodging entryway" 
@@ -162,14 +162,14 @@
           </article>
 
           <!-- Article 4 -->
-          <article class="blog-showcase" data-category="quan-an" style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 3.5rem; align-items: center; border-top: 1px solid rgba(0,0,0,0.06); padding-top: 4rem;">
+          <article class="blog-showcase blog-showcase--reverse blog-showcase--divided" data-category="quan-an">
             <div class="blog-showcase__content">
               <span class="text-muted" style="font-size: 0.85rem; display: block; margin-bottom: 0.5rem; font-weight: 500;">GOOGLE REVIEWS • 5-MIN READ</span>
               <h2 style="font-size: 1.65rem; line-height: 1.3; margin-bottom: 1rem;">Top-rated Hue dining spots on Google Reviews</h2>
               <p class="text-muted" style="line-height: 1.6; margin-bottom: 1.5rem;">Savor authentic Hue delicacies with our handpicked restaurant guide boasting stellar community scores. We explore highly recommended spots for traditional spicy beef noodles, rich salt coffee, clam bowl diners, and peaceful Buddhist temple vegan dining.</p>
               <a href="/en/bai-viet/top-rated-hue-restaurants-google-reviews.html" class="btn btn--secondary" style="align-self: flex-start;">Read full post</a>
             </div>
-            <div class="blog-showcase__img-box" style="border-radius: 8px; overflow: hidden; height: 350px;">
+            <div class="blog-showcase__img-box">
               <img 
                 src="/bai-viet/am-thuc-hue-4-1024x683.jpg" 
                 alt="Excellent local specialty dishes in Hue featured on top ratings reviews" 
@@ -181,8 +181,8 @@
           </article>
 
           <!-- Article 5 -->
-          <article class="blog-showcase" data-category="ca-phe" style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 3.5rem; align-items: center; border-top: 1px solid rgba(0,0,0,0.06); padding-top: 4rem;">
-            <div class="blog-showcase__img-box" style="border-radius: 8px; overflow: hidden; height: 350px;">
+          <article class="blog-showcase blog-showcase--divided" data-category="ca-phe">
+            <div class="blog-showcase__img-box">
               <img 
                 src="/bai-viet/z7905088702443_f23557384d820d7651fc4331e108fcbb.jpg" 
                 alt="Famous salt coffee and cozy vintage gardens in Hue" 
@@ -239,13 +239,13 @@
     </section>
 
     <!-- Bottom contact invitation -->
-    <section class="section section--alt" style="text-align: center;">
-      <div class="container" style="max-width: 600px;">
+    <section class="section section--alt section--centered-cta">
+      <div class="container container--narrow">
         <h2 class="section__title" style="border: none;">Seeking Tailored Suggestions?</h2>
-        <p class="text-muted" style="margin-bottom: 2rem;">Fairy's House hosts are glad to help plan maps details, restaurant guides, and tickets. Contact us directly to book a cozy room today.</p>
-        <div style="display: flex; gap: 1rem; justify-content: center;">
+        <p class="text-muted" style="margin-bottom: 2rem;">Fairy's House hosts are glad to help plan maps details, restaurant guides, and tickets. Contact us directly on Zalo to book a cozy room today.</p>
+        <div class="cta-inline">
           <a href="/en/phong.html" class="btn btn--primary">View Our Rooms</a>
-          <a href="https://wa.me/84971045045" class="btn btn--secondary" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
+          <a href="http://zalo.me/84971045045" class="btn btn--secondary" target="_blank" rel="noopener noreferrer">Chat on Zalo</a>
         </div>
       </div>
     </section>
@@ -301,8 +301,8 @@
       <span class="floating-cta__text">Call us</span>
     </a>
 
-    <a href="https://wa.me/84971045045" class="floating-cta__btn floating-cta__btn--zalo" target="_blank" rel="noopener noreferrer" style="background-color: #25D366;" aria-label="Chat on WhatsApp">
-      <span class="floating-cta__text">WhatsApp</span>
+    <a href="http://zalo.me/84971045045" class="floating-cta__btn floating-cta__btn--zalo" target="_blank" rel="noopener noreferrer" aria-label="Chat on Zalo">
+      <span class="floating-cta__text">Zalo</span>
     </a>
 
     <a href="https://www.google.com/maps/dir/?api=1&destination=16.4540514,107.5967128" class="floating-cta__btn floating-cta__btn--directions" target="_blank" rel="noopener noreferrer" aria-label="Directions on Google Maps">

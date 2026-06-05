@@ -229,7 +229,7 @@
         </div>
 
         <!-- Gallery Grid -->
-        <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem;">
+        <div class="gallery-grid">
           <!-- Interior Images -->
           <div class="gallery-item-wrapper" data-category="interior" style="position: relative; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-sm); aspect-ratio: 4/3; background-color: var(--border-light);">
             <img src="/assets/images/common-space/phong-khach-sanh-tiep-khach-fairys-house-hue-01.jpg" alt="Sảnh tiếp khách ấm cúng" style="width: 100%; height: 100%; object-fit: cover;" class="gallery-item-img" loading="lazy">
@@ -514,11 +514,11 @@
           <p class="section__intro" style="margin: 0 auto; max-width: 650px;">Cập nhật thời tiết trực tiếp tại Huế để chuẩn bị trang phục, hành lý và sắp xếp lịch trình tham quan các lăng tẩm, Đại Nội thuận tiện nhất.</p>
         </div>
 
-        <div class="weather-widget-container" style="background: var(--bg-card); border-radius: 16px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-light); overflow: hidden; max-width: 900px; margin: 0 auto; min-height: 250px;">
+        <div class="weather-widget-container">
           <!-- Weather Header & Current Day Info -->
           <div class="weather-main-grid">
             <!-- Current Temp Column -->
-            <div class="weather-current-col" style="background: var(--color-primary); color: #FFFFFF; padding: 2.5rem 2rem; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative;">
+            <div class="weather-current-col">
                <div id="weather-icon-main" style="font-size: 4rem; line-height: 1; margin-bottom: 1rem;"><span class="weather-spin">⏳</span></div>
               <div id="weather-temp-main" style="font-size: 3.5rem; font-weight: 700; line-height: 1; margin: 0.5rem 0; font-family: var(--font-sans);">--°C</div>
               <div id="weather-desc-main" style="font-size: 1.15rem; font-weight: 500; font-family: var(--font-serif); margin-bottom: 0.75rem; color: rgba(255, 255, 255, 0.95);">Đang tải dữ liệu...</div>
@@ -528,7 +528,7 @@
             </div>
             
             <!-- Details and Tips Column -->
-            <div class="weather-details-col" style="padding: 2.5rem; display: flex; flex-direction: column; justify-content: center; background-color: transparent; position: relative;">
+            <div class="weather-details-col">
               <h3 style="font-family: var(--font-serif); font-size: 1.3rem; color: var(--color-primary); margin-bottom: 1rem; display: flex; align-items: center; gap: 8px;">
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-accent);"><circle cx="12" cy="12" r="10"/><path d="m9.09 9 1-1a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" x2="12.01" y1="17" y2="17"/></svg>
                 Gợi ý hoạt động hôm nay:
@@ -538,16 +538,16 @@
               </p>
               
               <!-- Mini Grid Details -->
-              <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; border-top: 1px solid var(--border-light); padding-top: 1.2rem; margin-top: auto;">
-                <div style="text-align: center;">
+              <div class="weather-metrics-grid">
+                <div class="weather-metric">
                   <div style="font-size: 0.72rem; color: var(--color-accent); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.25rem;">Cảm giác như</div>
                   <div id="weather-feels-like" style="font-size: 1.15rem; font-weight: 600; color: var(--color-primary);">--°C</div>
                 </div>
-                <div style="text-align: center; border-left: 1px solid var(--border-light); border-right: 1px solid var(--border-light);">
+                <div class="weather-metric weather-metric--bordered">
                   <div style="font-size: 0.72rem; color: var(--color-accent); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.25rem;">Độ ẩm</div>
                   <div id="weather-humidity" style="font-size: 1.15rem; font-weight: 600; color: var(--color-primary);">--%</div>
                 </div>
-                <div style="text-align: center;">
+                <div class="weather-metric">
                   <div style="font-size: 0.72rem; color: var(--color-accent); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.25rem;">Tốc độ gió</div>
                   <div id="weather-wind" style="font-size: 1.15rem; font-weight: 600; color: var(--color-primary);">-- km/h</div>
                 </div>
@@ -556,7 +556,7 @@
           </div>
           
           <!-- Weather Forecast Days -->
-          <div id="weather-forecast-container" class="weather-forecast-row" style="background: rgba(44, 31, 29, 0.03); padding: 1.5rem 2.5rem; display: flex; justify-content: space-between; overflow-x: auto; gap: 1rem; border-top: 1px solid var(--border-light);">
+          <div id="weather-forecast-container" class="weather-forecast-row">
             <!-- Forecast items are generated in JS -->
             <div class="forecast-item" style="opacity: 0.5;">
               <div style="font-size: 0.8rem; color: var(--text-main); font-weight: 600;">--</div>
@@ -712,8 +712,8 @@
         </div>
 
         <!-- Section Ý kiến đóng góp & Đánh giá -->
-        <div style="margin-top: 5rem; max-width: 900px; margin-left: auto; margin-right: auto; background: linear-gradient(180deg, var(--bg-card) 0%, rgba(253, 251, 248, 0.8) 100%); padding: 3.5rem 3rem; border-radius: 24px; border: 1px solid rgba(197, 155, 109, 0.15); box-shadow: 0 15px 40px rgba(44, 31, 29, 0.04);">
-          <div style="text-align: center; margin-bottom: 2.5rem;">
+        <div class="feedback-panel">
+          <div class="feedback-panel__intro">
             <span class="section__sub" style="display: block; margin-bottom: 0.5rem; font-family: var(--font-sans); letter-spacing: 2px;">Trải Nghiệm Trọn Vẹn</span>
             <h3 style="border: none; margin-top: 0; padding-bottom: 0.5rem; font-size: 2rem; color: var(--color-primary); font-weight: 700; font-family: var(--font-serif); letter-spacing: -0.5px;">Đóng góp & Chia sẻ Trải nghiệm</h3>
             <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 0; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.6;">Những phản hồi trân quý và tình cảm từ bạn là nguồn động lực to lớn giúp Fairy’s House ngày một hoàn thiện, ấm cúng và chỉn chu hơn.</p>
@@ -721,8 +721,8 @@
           
           <div class="feedback-grid" style="margin-bottom: 2.5rem;">
             <!-- Suggestion card (Sage Green theme) -->
-            <div style="background-color: rgba(74, 103, 91, 0.03); padding: 1.75rem; border-radius: 16px; border: 1px solid rgba(74, 103, 91, 0.08); border-left: 4px solid var(--color-accent); transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.01);">
-              <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
+            <div class="feedback-card feedback-card--accent">
+              <div class="feedback-card__title">
                 <span style="font-size: 1.25rem; color: var(--color-accent);">🌿</span>
                 <h4 style="font-size: 1.1rem; color: var(--color-primary); margin: 0; font-weight: 600; font-family: var(--font-serif);">Ý kiến đóng góp</h4>
               </div>
@@ -730,8 +730,8 @@
             </div>
 
             <!-- Review card (Honey Teak theme) -->
-            <div style="background-color: rgba(197, 155, 109, 0.03); padding: 1.75rem; border-radius: 16px; border: 1px solid rgba(197, 155, 109, 0.08); border-left: 4px solid var(--color-secondary); transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.01);">
-              <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
+            <div class="feedback-card feedback-card--secondary">
+              <div class="feedback-card__title">
                 <span style="font-size: 1.25rem; color: var(--color-secondary);">✨</span>
                 <h4 style="font-size: 1.1rem; color: var(--color-primary); margin: 0; font-weight: 600; font-family: var(--font-serif);">Đánh giá 5★ trên Google</h4>
               </div>
@@ -739,19 +739,18 @@
             </div>
           </div>
 
-          <div style="display: flex; flex-direction: column; gap: 1rem; max-width: 520px; margin: 0 auto; width: 100%;">
+          <div class="feedback-panel__actions">
             <a href="https://www.google.com/search?q=fairy%27s+house+hu%C3%AA&oq=fai&gs_lcrp=EgZjaHJvbWUqBggBEEUYOzIGCAAQRRg5MgYIARBFGDsyBggCEEUYOzIGCAMQRRg9MgYIBBBFGD0yBggFEEUYPDIGCAYQRRg8MgYIBxBFGDzSAQgyMDkyajBqN6gCALACAA&sourceid=chrome&ie=UTF-8#lrd=0x3141a1768253f237:0x3a9c535186571e47,1,,,," 
                target="_blank" rel="noopener noreferrer" 
-               class="btn btn--primary" 
-               style="width: 100%; text-align: center; display: inline-flex; align-items: center; justify-content: center; background-color: var(--color-accent); color: white; padding: 1rem 1.75rem; border-radius: 50px; font-weight: 600; font-size: 0.95rem; box-shadow: 0 4px 15px rgba(74, 103, 91, 0.2); transition: all 0.3s ease; border: none;">
+               class="btn btn--primary btn--block">
               <span style="margin-right: 0.5rem;">🌟</span> Viết Đánh Giá 5★ Trên Google
             </a>
             
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-              <a href="http://zalo.me/84971045045" target="_blank" rel="noopener noreferrer" class="btn" style="text-align: center; display: inline-flex; align-items: center; justify-content: center; font-size: 0.9rem; font-weight: 500; padding: 0.8rem 1rem; border-radius: 50px; background-color: white; border: 1.5px solid rgba(44, 31, 29, 0.1); color: var(--color-primary); transition: all 0.3s ease;">
+            <div class="feedback-panel__secondary">
+              <a href="http://zalo.me/84971045045" target="_blank" rel="noopener noreferrer" class="btn feedback-action-secondary">
                 <span style="margin-right: 0.35rem; font-size: 1.1rem;">💬</span> Góp ý qua Zalo
               </a>
-              <a href="tel:0971045045" class="btn" style="text-align: center; display: inline-flex; align-items: center; justify-content: center; font-size: 0.9rem; font-weight: 500; padding: 0.8rem 1rem; border-radius: 50px; background-color: white; border: 1.5px solid rgba(44, 31, 29, 0.1); color: var(--color-primary); transition: all 0.3s ease;">
+              <a href="tel:0971045045" class="btn feedback-action-secondary">
                 <span style="margin-right: 0.35rem; font-size: 1.1rem;">📞</span> Gọi điện thoại
               </a>
             </div>

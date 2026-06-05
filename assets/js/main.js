@@ -24,18 +24,30 @@ document.addEventListener('DOMContentLoaded', () => {
   const body = document.body;
 
   if (menuToggle && navMenu) {
+    const closeMenu = () => {
+      navMenu.classList.remove('active');
+      body.classList.remove('menu-open');
+      menuToggle.classList.remove('active');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    };
+
+    const openMenu = () => {
+      navMenu.classList.add('active');
+      body.classList.add('menu-open');
+      menuToggle.classList.add('active');
+      menuToggle.setAttribute('aria-expanded', 'true');
+    };
+
     menuToggle.addEventListener('click', () => {
       const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
-      
-      // Toggle states
-      navMenu.classList.toggle('active');
-      body.classList.toggle('menu-open');
-      menuToggle.setAttribute('aria-expanded', !isExpanded);
-      
-      // Accessibly adjust visually hidden helpers or attributes
-      if (!isExpanded) {
-        menuToggle.focus();
+
+      if (isExpanded) {
+        closeMenu();
+        return;
       }
+
+      openMenu();
+      menuToggle.focus();
     });
 
     // Close menu when clicking outside on active mobile backdrop
@@ -43,9 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (body.classList.contains('menu-open') && 
           !navMenu.contains(e.target) && 
           !menuToggle.contains(e.target)) {
-        navMenu.classList.remove('active');
-        body.classList.remove('menu-open');
-        menuToggle.setAttribute('aria-expanded', 'false');
+        closeMenu();
       }
     });
 
@@ -53,10 +63,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = navMenu.querySelectorAll('.nav-menu__link');
     navLinks.forEach(link => {
       link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-        body.classList.remove('menu-open');
-        menuToggle.setAttribute('aria-expanded', 'false');
+        closeMenu();
       });
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && body.classList.contains('menu-open')) {
+        closeMenu();
+      }
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 768 && body.classList.contains('menu-open')) {
+        closeMenu();
+      }
     });
   }
 
