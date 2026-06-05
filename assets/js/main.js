@@ -377,8 +377,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // 6. Modern Scroll Reveal Engine (IntersectionObserver)
   const initScrollReveal = () => {
     // Select elements to reveal
-    const revealSections = document.querySelectorAll('.section, .about-block__img, .about-block__content, .map-embed, .map-info, .weather-widget-container, .testimonial-slider-wrapper');
-    const revealStaggers = document.querySelectorAll('.grid-3 .card, .features-grid .feature-box, .gallery-item-wrapper, .about-block__list-item');
+    const revealSections = document.querySelectorAll('.about-block__img, .about-block__content, .map-embed, .map-info, .weather-widget-container, .testimonial-slider-wrapper');
+    const revealStaggers = document.querySelectorAll('.grid-3 .card, .features-grid .feature-box, .about-block__list-item');
 
     // Setup initial state dynamically so it degrades gracefully if JS is disabled
     revealSections.forEach(el => {
@@ -422,6 +422,14 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.scroll-reveal, .scroll-reveal-stagger').forEach(el => {
       revealObserver.observe(el);
     });
+
+    // Never let animation state permanently hide content on mobile browsers.
+    window.setTimeout(() => {
+      document.querySelectorAll('.scroll-reveal:not(.reveal-active), .scroll-reveal-stagger:not(.reveal-active)').forEach(el => {
+        el.classList.add('reveal-active');
+        revealObserver.unobserve(el);
+      });
+    }, 1800);
   };
 
   // Run the scroll reveal initializer
@@ -429,7 +437,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollReveal();
   } else {
     // Fail-safe fallback: instantly show all elements if observer is unsupported
-    document.querySelectorAll('.section, .about-block__img, .about-block__content, .map-embed, .map-info, .weather-widget-container, .testimonial-slider-wrapper').forEach(el => {
+    document.querySelectorAll('.about-block__img, .about-block__content, .map-embed, .map-info, .weather-widget-container, .testimonial-slider-wrapper').forEach(el => {
       el.style.opacity = '1';
       el.style.transform = 'none';
     });
