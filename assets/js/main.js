@@ -127,15 +127,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (galleryTabBtns.length > 0 && galleryItems.length > 0) {
     galleryTabBtns.forEach(btn => {
+      btn.setAttribute('aria-pressed', btn.classList.contains('active') ? 'true' : 'false');
+    });
+
+    galleryTabBtns.forEach(btn => {
       btn.addEventListener('click', () => {
         // Clear active class from all tabs
-        galleryTabBtns.forEach(b => b.classList.remove('active'));
+        galleryTabBtns.forEach(b => {
+          b.classList.remove('active');
+          b.setAttribute('aria-pressed', 'false');
+        });
         btn.classList.add('active');
+        btn.setAttribute('aria-pressed', 'true');
+        btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
 
         const selectedCategory = btn.getAttribute('data-category');
 
         galleryItems.forEach(item => {
           const itemCategory = item.getAttribute('data-category');
+          const pendingTimer = item.dataset.filterTimer;
+
+          if (pendingTimer) {
+            window.clearTimeout(Number(pendingTimer));
+            delete item.dataset.filterTimer;
+          }
           
           if (selectedCategory === 'all' || itemCategory === selectedCategory) {
             item.style.display = 'block';
@@ -146,9 +161,10 @@ document.addEventListener('DOMContentLoaded', () => {
           } else {
             item.style.opacity = '0';
             item.style.transform = 'scale(0.96)';
-            setTimeout(() => {
+            item.dataset.filterTimer = String(window.setTimeout(() => {
               item.style.display = 'none';
-            }, 300);
+              delete item.dataset.filterTimer;
+            }, 300));
           }
         });
       });
