@@ -1297,6 +1297,86 @@ textarea.form-input {
   outline-offset: 2px;
 }
 
+@media (max-width: 767px) {
+  .floating-cta.floating-cta--dock {
+    left: 50%;
+    right: auto;
+    bottom: calc(0.75rem + env(safe-area-inset-bottom));
+    transform: translateX(-50%);
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    gap: 0.4rem;
+    width: min(260px, calc(100vw - 1.25rem));
+    padding: 0.45rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(44, 31, 29, 0.08);
+    box-shadow: 0 18px 36px rgba(44, 31, 29, 0.16);
+    backdrop-filter: blur(16px);
+  }
+
+  .floating-cta.floating-cta--dock .floating-cta__btn {
+    min-width: 0;
+    min-height: 46px;
+    flex: 1 1 0;
+    justify-content: center;
+    gap: 0;
+    padding: 0.35rem;
+    border: none;
+    border-radius: 999px;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .floating-cta.floating-cta--dock .floating-cta__btn::after {
+    display: none;
+  }
+
+  .floating-cta.floating-cta--dock .floating-cta__btn:hover {
+    transform: translateY(-1px);
+    box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--cta-accent) 34%, white 66%), 0 8px 16px rgba(44, 31, 29, 0.08);
+    background: rgba(255, 255, 255, 0.72);
+  }
+
+  .floating-cta.floating-cta--dock .floating-cta__btn:active,
+  .floating-cta.floating-cta--dock .floating-cta__btn:focus-visible {
+    transform: translateY(-1px) scale(0.98);
+    box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--cta-accent) 40%, white 60%), 0 10px 18px rgba(44, 31, 29, 0.1);
+    background: rgba(255, 255, 255, 0.6);
+    outline: none;
+  }
+
+  .floating-cta.floating-cta--dock .floating-cta__icon {
+    width: 2.25rem;
+    height: 2.25rem;
+    flex-basis: 2.25rem;
+    box-shadow: none;
+    transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+  }
+
+  .floating-cta.floating-cta--dock .floating-cta__icon svg {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .floating-cta.floating-cta--dock .floating-cta__btn:hover .floating-cta__icon {
+    transform: scale(1.12);
+    box-shadow: 0 0 0 0.18rem var(--cta-accent-soft);
+    background: color-mix(in srgb, var(--cta-accent-soft) 70%, white 30%);
+  }
+
+  .floating-cta.floating-cta--dock .floating-cta__btn:active .floating-cta__icon,
+  .floating-cta.floating-cta--dock .floating-cta__btn:focus-visible .floating-cta__icon {
+    transform: scale(1.14);
+    box-shadow: 0 0 0 0.22rem var(--cta-accent-soft);
+  }
+
+  .floating-cta.floating-cta--dock .floating-cta__text {
+    display: none;
+  }
+}
+
 @keyframes phoneRingIcon {
   0%, 100% { transform: rotate(0deg) scale(1); }
   10% { transform: rotate(-14deg) scale(1.04); }
