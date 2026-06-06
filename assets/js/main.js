@@ -205,6 +205,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const shortDaysVi = ['CN', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7'];
   const shortDaysEn = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  const HUE_WEATHER_LOCATION = Object.freeze({
+    nameVi: 'Huế',
+    nameEn: 'Hue',
+    latitude: 16.4637,
+    longitude: 107.5908,
+    timezone: 'Asia/Ho_Chi_Minh'
+  });
+
+  function isHueWeatherResponse(data) {
+    if (!data || typeof data.latitude !== 'number' || typeof data.longitude !== 'number') {
+      return false;
+    }
+
+    const latDiff = Math.abs(data.latitude - HUE_WEATHER_LOCATION.latitude);
+    const lonDiff = Math.abs(data.longitude - HUE_WEATHER_LOCATION.longitude);
+
+    return latDiff <= 0.25 && lonDiff <= 0.25;
+  }
 
   function getFallbackData() {
     const now = new Date();
@@ -335,9 +353,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const headerWeatherTicker = ensureHeaderWeatherTicker();
   if (headerWeatherTicker) {
-    const lat = 16.4637;
-    const lon = 107.5908;
-    const apiUrl = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,relative_humidity_2m,apparent_temperature,weather_code,wind_speed_10m&daily=weather_code,temperature_2m_max,temperature_2m_min&timezone=Asia/Bangkok`;
+    const apiUrl = `https://api.open-meteo.com/v1/forecast?latitude=${HUE_WEATHER_LOCATION.latitude}&longitude=${HUE_WEATHER_LOCATION.longitude}&current=temperature_2m,relative_humidity_2m,apparent_temperature,weather_code,wind_speed_10m&daily=weather_code,temperature_2m_max,temperature_2m_min&timezone=${HUE_WEATHER_LOCATION.timezone}`;
 
     const loadWeather = () => {
       fetch(apiUrl)
@@ -346,6 +362,10 @@ document.addEventListener('DOMContentLoaded', () => {
           return res.json();
         })
         .then(data => {
+          if (!isHueWeatherResponse(data)) {
+            throw new Error('Weather API returned a non-Hue location');
+          }
+
           updateHeaderWeatherTicker(data);
         })
         .catch(err => {

@@ -1,32 +1,43 @@
-# Fairy's House Huế Homestay Website
+# Fairy's House Huế
 
-Website giới thiệu và liên hệ đặt phòng chính thức của **Fairy's House Homestay Huế** – nằm tại số 19 Lương Văn Can, Phường An Cựu, Thành phố Huế.
+Website giới thiệu chính thức cho **Fairy's House Homestay Huế** tại **19 Lương Văn Can, Phường An Cựu, TP Huế**.
 
-## 📌 Tổng quan về Dự án
-Dự án được xây dựng với mục tiêu quảng bá, giới thiệu vẻ đẹp chân thực, ấm cúng và các tiện ích tuyệt vời của homestay Fairy's House Huế đến du khách trong và ngoài nước.
+## Mục tiêu
 
-Website tập trung vào trải nghiệm người dùng cao cấp, tốc độ tải trang nhanh và thiết kế nghệ thuật cao kết tinh từ màu sắc và chất liệu nội thất thực tế của homestay.
+- Giới thiệu phòng, tiện nghi và không gian homestay
+- Điều hướng khách liên hệ trực tiếp để đặt phòng
+- Giữ trải nghiệm nhanh, sạch, responsive
 
-### Các công nghệ sử dụng:
-- **HTML + CSS + JS**: Code thủ công nguyên bản, cấu trúc vững chắc và hiệu suất tối đa.
-- **Vite & Tailwind CSS**: Giúp tối ưu hóa toàn bộ assets, nén ảnh, bundling siêu hiệu quả.
-- **API Weather integration**: Lấy dữ liệu thời tiết thực tại Huế từ OpenWeather để đưa ra các gợi ý hoạt động du lịch phù hợp theo thời gian thực.
-- **Lightbox Gallery độc quyền**: Hỗ trợ phóng to thu nhỏ bằng chuột/thao tác kéo thả và chuyển slide mượt mà trên cả máy tính lẫn thiết bị di động.
+## Công nghệ
 
----
+- HTML5
+- CSS3
+- Vanilla JavaScript
+- Vite
 
-## 🚫 LƯU Ý QUAN TRỌNG VỀ PHƯƠNG THỨC ĐẶT PHÒNG
-- **Không có Form Đăng ký / Đặt phòng trực quan**: Website cam kết sự chuyên nghiệp, đơn giản bằng phương pháp liên hệ trực tiếp.
-- **Chốt phòng trực tiếp**: Tất cả các hành động giữ chỗ, xem lịch trống và đàm phán giá cả của khách hàng được thực hiện qua:
-  - Hotline chính thức: `0971 045 045` (gọi điện thoại trực tiếp).
-  - Trò chuyện Zalo: `http://zalo.me/84971045045` (phòng chăm sóc khách hàng chủ chốt liên hệ tức thì).
-- **Tuyệt đối không bổ sung form nhập thông tin**: Bất cứ chỉnh sửa nào trong tương lai không được tự ý thêm các input field hay form gửi database, tất cả nút đặt chỗ cần luôn liên kết với các kênh liên hệ trực tiếp trên.
+## Quy tắc quan trọng
 
----
+- Không dùng form đặt phòng hoặc form đăng ký
+- Đặt phòng chỉ qua liên hệ trực tiếp
+- Hotline: `tel:0971045045`
+- Zalo: `http://zalo.me/84971045045`
 
-## 📂 Cấu trúc Thư mục chính
-- **/** (root): Giao diện tiếng Việt (`index.html`, `phong.html`, `lien-he.html`, `gioi-thieu.html`...).
-- **/en/**: Giao diện tiếng Anh tương đương cho khách nước ngoài.
-- **/assets/css/`style.css`**: Định nghĩa theme hệ màu trắng tự nhiên và ấm áp gỗ tếch.
-- **/assets/js/`main.js`**: Hỗ trợ các chức năng động (thời tiết, lightbox, menu responsive...).
-- **/bai-viet/**: Cẩm nang ẩm thực, du lịch và blog chia sẻ tại Huế.
+## Cấu trúc chính
+
+- `index.html`, `phong.html`, `gioi-thieu.html`, `lien-he.html`: bản tiếng Việt
+- `en/`: bản tiếng Anh
+- `assets/css/style.css`: toàn bộ giao diện
+- `assets/js/main.js`: menu, gallery, lightbox, weather ticker
+- `assets/images/`: hình ảnh dự án
+
+## Chạy local
+
+```bash
+npm install
+npm run dev
+```
+
+## Ghi chú
+
+- Khi sửa nội dung trang chủ hoặc CTA, cần kiểm tra cả bản Việt và bản Anh
+- Widget thời tiết phải luôn lấy dữ liệu cho **thành phố Huế**
