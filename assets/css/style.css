@@ -347,11 +347,15 @@ p {
 }
 
 /* Background classes for pages using inline styles or generated static images */
-.hero--home::before { background-image: url('/assets/images/hero-bg.jpg'); }
-.hero--intro::before { background-image: url('/assets/images/khong-gian-fairys-house-hue.webp'); }
-.hero--rooms::before { background-image: url('/assets/images/phong-doi-am-cung-fairys-house-hue.webp'); }
-.hero--tips::before { background-image: url('/assets/images/du-lich-hue.webp'); }
-.hero--contact::before { background-image: url('/assets/images/khong-gian-fairys-house-hue.webp'); }
+.hero--home::before { background-image: url('/assets/images/optimized/hero-home-900.webp'); }
+.hero--intro::before { background-image: url('/assets/images/optimized/hero-intro-1200.webp'); }
+.hero--rooms::before { background-image: url('/assets/images/optimized/hero-rooms-1200.webp'); }
+.hero--tips::before { background-image: url('/assets/images/optimized/hero-tips-1200.webp'); }
+.hero--contact::before { background-image: url('/assets/images/optimized/hero-intro-1200.webp'); }
+
+@media (min-width: 768px) {
+  .hero--home::before { background-image: url('/assets/images/optimized/hero-home-1600.webp'); }
+}
 
 .hero__content {
   position: relative;
@@ -575,6 +579,14 @@ p {
   box-shadow: var(--shadow-md);
   border: 1px solid var(--border-light);
   aspect-ratio: 4 / 3;
+}
+
+.about-block__img > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 38%;
 }
 
 .exterior-slider .slider-image,
@@ -2950,9 +2962,17 @@ h3 {
 }
 
 @media (max-width: 767px) {
+  .header {
+    background-color: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+
   .header__nav {
     grid-template-columns: auto 1fr auto !important;
     gap: 0.75rem;
+    min-height: 64px;
+    padding-block: 0.55rem !important;
   }
 
   .header__nav .menu-toggle {
@@ -2968,6 +2988,77 @@ h3 {
   .header__nav .header-lang {
     justify-self: end;
     margin-right: 0;
+  }
+
+  .logo-img {
+    height: 38px;
+    max-width: min(44vw, 180px);
+  }
+
+  .header-lang {
+    gap: 0.25rem;
+    font-size: 0.82rem;
+  }
+
+  .header-lang .lang-switch-btn {
+    min-width: 38px;
+    min-height: 38px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.35rem 0.5rem;
+  }
+
+  .section {
+    padding-block: clamp(2.75rem, 9vw, 3.75rem);
+  }
+
+  .section__meta {
+    margin-bottom: 1.75rem;
+  }
+
+  .hero {
+    min-height: min(620px, 74svh);
+    padding: 5.75rem 0 3rem;
+  }
+
+  .hero::before {
+    background-position: center center;
+  }
+
+  .hero__ctas {
+    width: min(100%, 320px);
+    margin-inline: auto;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.8rem;
+  }
+
+  .hero__ctas .btn {
+    width: 100%;
+  }
+
+  .feature-box {
+    padding: 1.25rem;
+  }
+
+  .floating-cta {
+    right: 0.75rem;
+    bottom: calc(5.25rem + env(safe-area-inset-bottom));
+    gap: 0.5rem;
+    max-width: 112px;
+  }
+
+  .floating-cta__btn {
+    min-height: 42px;
+    padding: 0.62rem 0.75rem;
+    font-size: 0.68rem;
+    box-shadow: 0 4px 14px rgba(44, 31, 29, 0.14);
+  }
+
+  .scroll-to-top {
+    left: 0.9rem;
+    bottom: calc(5.25rem + env(safe-area-inset-bottom));
   }
 
   .nav-menu {
@@ -3000,4 +3091,3 @@ h3 {
     font-size: 1rem !important;
   }
 }
-

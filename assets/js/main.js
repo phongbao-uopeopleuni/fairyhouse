@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         btn.classList.add('active');
         btn.setAttribute('aria-pressed', 'true');
-        btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
 
         const selectedCategory = btn.getAttribute('data-category');
 
@@ -358,20 +358,36 @@ document.addEventListener('DOMContentLoaded', () => {
     const lat = 16.4637;
     const lon = 107.5908;
     const apiUrl = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,relative_humidity_2m,apparent_temperature,weather_code,wind_speed_10m&daily=weather_code,temperature_2m_max,temperature_2m_min&timezone=Asia/Bangkok`;
-    
-    fetch(apiUrl)
-      .then(res => {
-        if (!res.ok) throw new Error('API failure');
-        return res.json();
-      })
-      .then(data => {
-        updateWeatherWidget(data);
-      })
-      .catch(err => {
-        console.warn('Weather fallback logic triggered:', err);
-        const fallback = getFallbackData();
-        updateWeatherWidget(fallback);
-      });
+
+    const loadWeather = () => {
+      fetch(apiUrl)
+        .then(res => {
+          if (!res.ok) throw new Error('API failure');
+          return res.json();
+        })
+        .then(data => {
+          updateWeatherWidget(data);
+        })
+        .catch(err => {
+          console.warn('Weather fallback logic triggered:', err);
+          const fallback = getFallbackData();
+          updateWeatherWidget(fallback);
+        });
+    };
+
+    const scheduleWeatherLoad = () => {
+      if ('requestIdleCallback' in window) {
+        window.requestIdleCallback(loadWeather, { timeout: 2500 });
+      } else {
+        window.setTimeout(loadWeather, 700);
+      }
+    };
+
+    if (document.readyState === 'complete') {
+      scheduleWeatherLoad();
+    } else {
+      window.addEventListener('load', scheduleWeatherLoad, { once: true });
+    }
   }
 
   // 6. Modern Scroll Reveal Engine (IntersectionObserver)
@@ -790,7 +806,7 @@ document.addEventListener('DOMContentLoaded', () => {
           .filter(el => window.getComputedStyle(el).display !== 'none');
 
         return wrappers.map(wrapper => {
-          const img = wrapper.querySelector('.gallery-item-img');
+          const img = wrapper.querySelector('.gallery-item-img') || wrapper.querySelector('img');
           const h4 = wrapper.querySelector('.gallery-item-overlay h4') || wrapper.querySelector('h4');
           const p = wrapper.querySelector('.gallery-item-overlay p') || wrapper.querySelector('p');
           
@@ -809,7 +825,7 @@ document.addEventListener('DOMContentLoaded', () => {
           e.preventDefault();
           
           const currentList = getHomepageImagesList();
-          const targetImg = wrapper.querySelector('.gallery-item-img');
+          const targetImg = wrapper.querySelector('.gallery-item-img') || wrapper.querySelector('img');
           const targetSrc = targetImg ? targetImg.getAttribute('src') : '';
           
           // Locate image index in matching active files

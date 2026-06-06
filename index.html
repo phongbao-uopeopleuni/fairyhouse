@@ -12,7 +12,9 @@
   <meta name="robots" content="index, follow">
   
   <link rel="canonical" href="https://www.fairyshousehue.vn/index.html">
-  <link rel="icon" type="image/png" href="/assets/images/logo.png">
+  <link rel="icon" type="image/png" href="/assets/images/optimized/favicon-96.png">
+  <link rel="preload" as="image" href="/assets/images/optimized/hero-home-900.webp" type="image/webp" media="(max-width: 767px)" fetchpriority="high">
+  <link rel="preload" as="image" href="/assets/images/optimized/hero-home-1600.webp" type="image/webp" media="(min-width: 768px)" fetchpriority="high">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
@@ -94,7 +96,7 @@
     <!-- Sticky Header -->
   <header class="header" id="header">
     <div class="container header__nav">
-      <a href="/index.html" class="logo" aria-label="Fairy's House Huế Home"><img src="/assets/images/logo.png" alt="Fairy's House Huế" class="logo-img"></a>
+      <a href="/index.html" class="logo" aria-label="Fairy's House Huế Home"><img src="/assets/images/optimized/logo-320.png" width="160" height="76" alt="Fairy's House Huế" class="logo-img"></a>
       
       <!-- Mobile toggle menu -->
       <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Mở danh mục điều hướng">
@@ -151,7 +153,7 @@
       <div class="container">
         <div class="about-block">
           <div class="about-block__img">
-            <img src="/assets/images/exterior/mat-tien-ban-cong-fairys-house-hue-02.jpg" alt="Ban công mặt tiền Fairy's House Huế" loading="lazy">
+            <img src="/assets/images/exterior/mat-tien-ban-cong-fairys-house-hue-02.jpg" srcset="/assets/images/optimized/gallery/mat-tien-ban-cong-fairys-house-hue-02-640.webp 640w, /assets/images/optimized/about-front-900.webp 900w" sizes="(max-width: 767px) calc(100vw - 2rem), min(50vw, 620px)" alt="Ban công mặt tiền Fairy's House Huế" loading="lazy" decoding="async">
           </div>
           <div class="about-block__content">
             <span class="section__sub">Về chúng tôi</span>
@@ -232,35 +234,35 @@
         <div class="gallery-grid">
           <!-- Interior Images -->
           <div class="gallery-item-wrapper" data-category="interior" style="position: relative; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-sm); aspect-ratio: 4/3; background-color: var(--border-light);">
-            <img src="/assets/images/common-space/phong-khach-sanh-tiep-khach-fairys-house-hue-01.jpg" alt="Sảnh tiếp khách ấm cúng" style="width: 100%; height: 100%; object-fit: cover;" class="gallery-item-img" loading="lazy">
+            <img src="/assets/images/common-space/phong-khach-sanh-tiep-khach-fairys-house-hue-01.jpg" srcset="/assets/images/optimized/gallery/phong-khach-sanh-tiep-khach-fairys-house-hue-01-640.webp 640w" sizes="(max-width: 767px) calc(100vw - 2rem), (max-width: 1199px) calc((100vw - 4rem) / 2), 320px" alt="Sảnh tiếp khách ấm cúng" style="width: 100%; height: 100%; object-fit: cover;" class="gallery-item-img" loading="lazy" decoding="async">
             <div class="gallery-item-overlay" style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.7)); padding: 1rem; color: #FFFFFF; text-align: left;">
               <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.85; font-family: var(--font-sans);">Không gian bên trong</span>
               <h4 style="color: #FFFFFF; margin: 0.2rem 0 0; font-size: 1rem; font-family: var(--font-serif); font-weight: 600;">Sảnh tiếp khách ấm cúng</h4>
             </div>
           </div>
           <div class="gallery-item-wrapper" data-category="interior" style="position: relative; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-sm); aspect-ratio: 4/3; background-color: var(--border-light);">
-            <img src="/assets/images/common-space/bep-chung-trang-fairys-house-hue-01.jpg" alt="Bếp chung" style="width: 100%; height: 100%; object-fit: cover;" class="gallery-item-img" loading="lazy">
+            <img src="/assets/images/common-space/bep-chung-trang-fairys-house-hue-01.jpg" srcset="/assets/images/optimized/gallery/bep-chung-trang-fairys-house-hue-01-640.webp 640w" sizes="(max-width: 767px) calc(100vw - 2rem), (max-width: 1199px) calc((100vw - 4rem) / 2), 320px" alt="Bếp chung" style="width: 100%; height: 100%; object-fit: cover;" class="gallery-item-img" loading="lazy" decoding="async">
             <div class="gallery-item-overlay" style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.7)); padding: 1rem; color: #FFFFFF; text-align: left;">
               <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.85; font-family: var(--font-sans);">Không gian bên trong</span>
               <h4 style="color: #FFFFFF; margin: 0.2rem 0 0; font-size: 1rem; font-family: var(--font-serif); font-weight: 600;">Bếp chung tiện nghi</h4>
             </div>
           </div>
           <div class="gallery-item-wrapper" data-category="interior" style="position: relative; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-sm); aspect-ratio: 4/3; background-color: var(--border-light);">
-            <img src="/assets/images/common-space/khu-bep-ban-an-fairys-house-hue-02.jpg" alt="Khu bếp và bàn ăn" style="width: 100%; height: 100%; object-fit: cover;" class="gallery-item-img" loading="lazy">
+            <img src="/assets/images/common-space/khu-bep-ban-an-fairys-house-hue-02.jpg" srcset="/assets/images/optimized/gallery/khu-bep-ban-an-fairys-house-hue-02-640.webp 640w" sizes="(max-width: 767px) calc(100vw - 2rem), (max-width: 1199px) calc((100vw - 4rem) / 2), 320px" alt="Khu bếp và bàn ăn" style="width: 100%; height: 100%; object-fit: cover;" class="gallery-item-img" loading="lazy" decoding="async">
             <div class="gallery-item-overlay" style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.7)); padding: 1rem; color: #FFFFFF; text-align: left;">
               <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.85; font-family: var(--font-sans);">Không gian bên trong</span>
               <h4 style="color: #FFFFFF; margin: 0.2rem 0 0; font-size: 1rem; font-family: var(--font-serif); font-weight: 600;">Khu bếp và bàn ăn</h4>
             </div>
           </div>
           <div class="gallery-item-wrapper" data-category="interior" style="position: relative; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-sm); aspect-ratio: 4/3; background-color: var(--border-light);">
-            <img src="/assets/images/common-space/sofa-da-cau-thang-fairys-house-hue-02.jpg" alt="Sofa da dưới cầu thang" style="width: 100%; height: 100%; object-fit: cover;" class="gallery-item-img" loading="lazy">
+            <img src="/assets/images/common-space/sofa-da-cau-thang-fairys-house-hue-02.jpg" srcset="/assets/images/optimized/gallery/sofa-da-cau-thang-fairys-house-hue-02-640.webp 640w" sizes="(max-width: 767px) calc(100vw - 2rem), (max-width: 1199px) calc((100vw - 4rem) / 2), 320px" alt="Sofa da dưới cầu thang" style="width: 100%; height: 100%; object-fit: cover;" class="gallery-item-img" loading="lazy" decoding="async">
             <div class="gallery-item-overlay" style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.7)); padding: 1rem; color: #FFFFFF; text-align: left;">
               <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.85; font-family: var(--font-sans);">Không gian bên trong</span>
               <h4 style="color: #FFFFFF; margin: 0.2rem 0 0; font-size: 1rem; font-family: var(--font-serif); font-weight: 600;">Góc sofa da thư giãn</h4>
             </div>
           </div>
           <div class="gallery-item-wrapper" data-category="interior" style="position: relative; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-sm); aspect-ratio: 4/3; background-color: var(--border-light);">
-            <img src="/assets/images/common-space/cau-thang-nhin-len-fairys-house-hue-03.jpg" alt="Cầu thang nhìn lên" style="width: 100%; height: 100%; object-fit: cover;" class="gallery-item-img" loading="lazy">
+            <img src="/assets/images/common-space/cau-thang-nhin-len-fairys-house-hue-03.jpg" srcset="/assets/images/optimized/gallery/cau-thang-nhin-len-fairys-house-hue-03-640.webp 640w" sizes="(max-width: 767px) calc(100vw - 2rem), (max-width: 1199px) calc((100vw - 4rem) / 2), 320px" alt="Cầu thang nhìn lên" style="width: 100%; height: 100%; object-fit: cover;" class="gallery-item-img" loading="lazy" decoding="async">
             <div class="gallery-item-overlay" style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.7)); padding: 1rem; color: #FFFFFF; text-align: left;">
               <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.85; font-family: var(--font-sans);">Không gian bên trong</span>
               <h4 style="color: #FFFFFF; margin: 0.2rem 0 0; font-size: 1rem; font-family: var(--font-serif); font-weight: 600;">Cầu thang tinh tế</h4>
@@ -268,28 +270,28 @@
           </div>
 
           <div class="gallery-item-wrapper" data-category="interior" style="position: relative; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-sm); aspect-ratio: 4/3; background-color: var(--border-light);">
-            <img src="/assets/images/common-space/phong-khach-sofa-noel-fairys-house-hue-05.jpg" alt="Phòng khách mùa Noel" style="width: 100%; height: 100%; object-fit: cover;" class="gallery-item-img" loading="lazy">
+            <img src="/assets/images/common-space/phong-khach-sofa-noel-fairys-house-hue-05.jpg" srcset="/assets/images/optimized/gallery/phong-khach-sofa-noel-fairys-house-hue-05-640.webp 640w" sizes="(max-width: 767px) calc(100vw - 2rem), (max-width: 1199px) calc((100vw - 4rem) / 2), 320px" alt="Phòng khách mùa Noel" style="width: 100%; height: 100%; object-fit: cover;" class="gallery-item-img" loading="lazy" decoding="async">
             <div class="gallery-item-overlay" style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.7)); padding: 1rem; color: #FFFFFF; text-align: left;">
               <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.85; font-family: var(--font-sans);">Không gian bên trong</span>
               <h4 style="color: #FFFFFF; margin: 0.2rem 0 0; font-size: 1rem; font-family: var(--font-serif); font-weight: 600;">Không khí lễ hội</h4>
             </div>
           </div>
           <div class="gallery-item-wrapper" data-category="interior" style="position: relative; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-sm); aspect-ratio: 4/3; background-color: var(--border-light);">
-            <img src="/assets/images/common-space/phong-khach-ghe-go-fairys-house-hue-04.jpg" alt="Phòng khách ghế gỗ" style="width: 100%; height: 100%; object-fit: cover;" class="gallery-item-img" loading="lazy">
+            <img src="/assets/images/common-space/phong-khach-ghe-go-fairys-house-hue-04.jpg" srcset="/assets/images/optimized/gallery/phong-khach-ghe-go-fairys-house-hue-04-640.webp 640w" sizes="(max-width: 767px) calc(100vw - 2rem), (max-width: 1199px) calc((100vw - 4rem) / 2), 320px" alt="Phòng khách ghế gỗ" style="width: 100%; height: 100%; object-fit: cover;" class="gallery-item-img" loading="lazy" decoding="async">
             <div class="gallery-item-overlay" style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.7)); padding: 1rem; color: #FFFFFF; text-align: left;">
               <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.85; font-family: var(--font-sans);">Không gian bên trong</span>
               <h4 style="color: #FFFFFF; margin: 0.2rem 0 0; font-size: 1rem; font-family: var(--font-serif); font-weight: 600;">Góc thư giãn ghế gỗ</h4>
             </div>
           </div>
           <div class="gallery-item-wrapper" data-category="interior" style="position: relative; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-sm); aspect-ratio: 4/3; background-color: var(--border-light);">
-            <img src="/assets/images/common-space/cau-thang-hoa-trang-tri-fairys-house-hue-06.jpg" alt="Cầu thang trang trí hoa" style="width: 100%; height: 100%; object-fit: cover;" class="gallery-item-img" loading="lazy">
+            <img src="/assets/images/common-space/cau-thang-hoa-trang-tri-fairys-house-hue-06.jpg" srcset="/assets/images/optimized/gallery/cau-thang-hoa-trang-tri-fairys-house-hue-06-640.webp 640w" sizes="(max-width: 767px) calc(100vw - 2rem), (max-width: 1199px) calc((100vw - 4rem) / 2), 320px" alt="Cầu thang trang trí hoa" style="width: 100%; height: 100%; object-fit: cover;" class="gallery-item-img" loading="lazy" decoding="async">
             <div class="gallery-item-overlay" style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.7)); padding: 1rem; color: #FFFFFF; text-align: left;">
               <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.85; font-family: var(--font-sans);">Không gian bên trong</span>
               <h4 style="color: #FFFFFF; margin: 0.2rem 0 0; font-size: 1rem; font-family: var(--font-serif); font-weight: 600;">Góc hoa trang trí</h4>
             </div>
           </div>
           <div class="gallery-item-wrapper" data-category="interior" style="position: relative; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-sm); aspect-ratio: 4/3; background-color: var(--border-light);">
-            <img src="/assets/images/common-space/cau-thang-nhin-tu-tren-xuong-fairys-house-hue-07.jpg" alt="Cầu thang nhìn từ trên xuống" style="width: 100%; height: 100%; object-fit: cover;" class="gallery-item-img" loading="lazy">
+            <img src="/assets/images/common-space/cau-thang-nhin-tu-tren-xuong-fairys-house-hue-07.jpg" srcset="/assets/images/optimized/gallery/cau-thang-nhin-tu-tren-xuong-fairys-house-hue-07-640.webp 640w" sizes="(max-width: 767px) calc(100vw - 2rem), (max-width: 1199px) calc((100vw - 4rem) / 2), 320px" alt="Cầu thang nhìn từ trên xuống" style="width: 100%; height: 100%; object-fit: cover;" class="gallery-item-img" loading="lazy" decoding="async">
             <div class="gallery-item-overlay" style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.7)); padding: 1rem; color: #FFFFFF; text-align: left;">
               <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.85; font-family: var(--font-sans);">Không gian bên trong</span>
               <h4 style="color: #FFFFFF; margin: 0.2rem 0 0; font-size: 1rem; font-family: var(--font-serif); font-weight: 600;">Góc nhìn cầu thang</h4>
@@ -298,49 +300,49 @@
 
           <!-- Exterior Images -->
           <div class="gallery-item-wrapper" data-category="exterior" style="position: relative; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-sm); aspect-ratio: 4/3; background-color: var(--border-light);">
-            <img src="/assets/images/exterior/mat-tien-fairys-house-hue-01.jpg" alt="Mặt tiền Fairy's House Huế" style="width: 100%; height: 100%; object-fit: cover;" class="gallery-item-img" loading="lazy">
+            <img src="/assets/images/exterior/mat-tien-fairys-house-hue-01.jpg" srcset="/assets/images/optimized/gallery/mat-tien-fairys-house-hue-01-640.webp 640w" sizes="(max-width: 767px) calc(100vw - 2rem), (max-width: 1199px) calc((100vw - 4rem) / 2), 320px" alt="Mặt tiền Fairy's House Huế" style="width: 100%; height: 100%; object-fit: cover;" class="gallery-item-img" loading="lazy" decoding="async">
             <div class="gallery-item-overlay" style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.7)); padding: 1rem; color: #FFFFFF; text-align: left;">
               <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.85; font-family: var(--font-sans);">Không gian bên ngoài</span>
               <h4 style="color: #FFFFFF; margin: 0.2rem 0 0; font-size: 1rem; font-family: var(--font-serif); font-weight: 600;">Mặt tiền rạng rỡ</h4>
             </div>
           </div>
           <div class="gallery-item-wrapper" data-category="exterior" style="position: relative; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-sm); aspect-ratio: 4/3; background-color: var(--border-light);">
-            <img src="/assets/images/exterior/mat-tien-ban-cong-fairys-house-hue-02.jpg" alt="Ban công mặt tiền" style="width: 100%; height: 100%; object-fit: cover;" class="gallery-item-img" loading="lazy">
+            <img src="/assets/images/exterior/mat-tien-ban-cong-fairys-house-hue-02.jpg" srcset="/assets/images/optimized/gallery/mat-tien-ban-cong-fairys-house-hue-02-640.webp 640w" sizes="(max-width: 767px) calc(100vw - 2rem), (max-width: 1199px) calc((100vw - 4rem) / 2), 320px" alt="Ban công mặt tiền" style="width: 100%; height: 100%; object-fit: cover;" class="gallery-item-img" loading="lazy" decoding="async">
             <div class="gallery-item-overlay" style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.7)); padding: 1rem; color: #FFFFFF; text-align: left;">
               <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.85; font-family: var(--font-sans);">Không gian bên ngoài</span>
               <h4 style="color: #FFFFFF; margin: 0.2rem 0 0; font-size: 1rem; font-family: var(--font-serif); font-weight: 600;">Ban công nắng mai</h4>
             </div>
           </div>
           <div class="gallery-item-wrapper" data-category="exterior" style="position: relative; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-sm); aspect-ratio: 4/3; background-color: var(--border-light);">
-            <img src="/assets/images/exterior/bien-hieu-fairys-house-hue-03.jpg" alt="Biển hiệu" style="width: 100%; height: 100%; object-fit: cover;" class="gallery-item-img" loading="lazy">
+            <img src="/assets/images/exterior/bien-hieu-fairys-house-hue-03.jpg" srcset="/assets/images/optimized/gallery/bien-hieu-fairys-house-hue-03-640.webp 640w" sizes="(max-width: 767px) calc(100vw - 2rem), (max-width: 1199px) calc((100vw - 4rem) / 2), 320px" alt="Biển hiệu" style="width: 100%; height: 100%; object-fit: cover;" class="gallery-item-img" loading="lazy" decoding="async">
             <div class="gallery-item-overlay" style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.7)); padding: 1rem; color: #FFFFFF; text-align: left;">
               <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.85; font-family: var(--font-sans);">Không gian bên ngoài</span>
               <h4 style="color: #FFFFFF; margin: 0.2rem 0 0; font-size: 1rem; font-family: var(--font-serif); font-weight: 600;">Góc check-in biển hiệu</h4>
             </div>
           </div>
           <div class="gallery-item-wrapper" data-category="exterior" style="position: relative; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-sm); aspect-ratio: 4/3; background-color: var(--border-light);">
-            <img src="/assets/images/exterior/san-vao-cong-fairys-house-hue-04.jpg" alt="Sân vào cổng" style="width: 100%; height: 100%; object-fit: cover;" class="gallery-item-img" loading="lazy">
+            <img src="/assets/images/exterior/san-vao-cong-fairys-house-hue-04.jpg" srcset="/assets/images/optimized/gallery/san-vao-cong-fairys-house-hue-04-640.webp 640w" sizes="(max-width: 767px) calc(100vw - 2rem), (max-width: 1199px) calc((100vw - 4rem) / 2), 320px" alt="Sân vào cổng" style="width: 100%; height: 100%; object-fit: cover;" class="gallery-item-img" loading="lazy" decoding="async">
             <div class="gallery-item-overlay" style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.7)); padding: 1rem; color: #FFFFFF; text-align: left;">
               <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.85; font-family: var(--font-sans);">Không gian bên ngoài</span>
               <h4 style="color: #FFFFFF; margin: 0.2rem 0 0; font-size: 1rem; font-family: var(--font-serif); font-weight: 600;">Sân vườn thoáng đãng</h4>
             </div>
           </div>
           <div class="gallery-item-wrapper" data-category="exterior" style="position: relative; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-sm); aspect-ratio: 4/3; background-color: var(--border-light);">
-            <img src="/assets/images/exterior/loi-vao-san-cay-noel-fairys-house-hue-05.jpg" alt="Lối vào cây Noel" style="width: 100%; height: 100%; object-fit: cover;" class="gallery-item-img" loading="lazy">
+            <img src="/assets/images/exterior/loi-vao-san-cay-noel-fairys-house-hue-05.jpg" srcset="/assets/images/optimized/gallery/loi-vao-san-cay-noel-fairys-house-hue-05-640.webp 640w" sizes="(max-width: 767px) calc(100vw - 2rem), (max-width: 1199px) calc((100vw - 4rem) / 2), 320px" alt="Lối vào cây Noel" style="width: 100%; height: 100%; object-fit: cover;" class="gallery-item-img" loading="lazy" decoding="async">
             <div class="gallery-item-overlay" style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.7)); padding: 1rem; color: #FFFFFF; text-align: left;">
               <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.85; font-family: var(--font-sans);">Không gian bên ngoài</span>
               <h4 style="color: #FFFFFF; margin: 0.2rem 0 0; font-size: 1rem; font-family: var(--font-serif); font-weight: 600;">Góc sân dịp lễ hội</h4>
             </div>
           </div>
           <div class="gallery-item-wrapper" data-category="exterior" style="position: relative; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-sm); aspect-ratio: 4/3; background-color: var(--border-light);">
-            <img src="/assets/images/exterior/mat-tien-ban-dem-den-long-fairys-house-hue-06.jpg" alt="Mặt tiền ban đêm đèn lồng" style="width: 100%; height: 100%; object-fit: cover;" class="gallery-item-img" loading="lazy">
+            <img src="/assets/images/exterior/mat-tien-ban-dem-den-long-fairys-house-hue-06.jpg" srcset="/assets/images/optimized/gallery/mat-tien-ban-dem-den-long-fairys-house-hue-06-640.webp 640w" sizes="(max-width: 767px) calc(100vw - 2rem), (max-width: 1199px) calc((100vw - 4rem) / 2), 320px" alt="Mặt tiền ban đêm đèn lồng" style="width: 100%; height: 100%; object-fit: cover;" class="gallery-item-img" loading="lazy" decoding="async">
             <div class="gallery-item-overlay" style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.7)); padding: 1rem; color: #FFFFFF; text-align: left;">
               <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.85; font-family: var(--font-sans);">Không gian bên ngoài</span>
               <h4 style="color: #FFFFFF; margin: 0.2rem 0 0; font-size: 1rem; font-family: var(--font-serif); font-weight: 600;">Lồng đèn rực rỡ ban đêm</h4>
             </div>
           </div>
           <div class="gallery-item-wrapper" data-category="exterior" style="position: relative; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-sm); aspect-ratio: 4/3; background-color: var(--border-light);">
-            <img src="/assets/images/exterior/mat-tien-dem-hoa-giay-fairys-house-hue-07.jpg" alt="Mặt tiền ban đêm hoa giấy" style="width: 100%; height: 100%; object-fit: cover;" class="gallery-item-img" loading="lazy">
+            <img src="/assets/images/exterior/mat-tien-dem-hoa-giay-fairys-house-hue-07.jpg" srcset="/assets/images/optimized/gallery/mat-tien-dem-hoa-giay-fairys-house-hue-07-640.webp 640w" sizes="(max-width: 767px) calc(100vw - 2rem), (max-width: 1199px) calc((100vw - 4rem) / 2), 320px" alt="Mặt tiền ban đêm hoa giấy" style="width: 100%; height: 100%; object-fit: cover;" class="gallery-item-img" loading="lazy" decoding="async">
             <div class="gallery-item-overlay" style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.7)); padding: 1rem; color: #FFFFFF; text-align: left;">
               <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.85; font-family: var(--font-sans);">Không gian bên ngoài</span>
               <h4 style="color: #FFFFFF; margin: 0.2rem 0 0; font-size: 1rem; font-family: var(--font-serif); font-weight: 600;">Hoa giấy lung linh</h4>
@@ -349,98 +351,98 @@
 
           <!-- Room Images -->
           <div class="gallery-item-wrapper" data-category="rooms" style="position: relative; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-sm); aspect-ratio: 4/3; background-color: var(--border-light);">
-            <img src="/assets/images/rooms/phong-doi-dau-giuong-vom-go-fairys-house-hue-01.jpg" alt="Phòng đôi vòm gỗ" style="width: 100%; height: 100%; object-fit: cover;" class="gallery-item-img" loading="lazy">
+            <img src="/assets/images/rooms/phong-doi-dau-giuong-vom-go-fairys-house-hue-01.jpg" srcset="/assets/images/optimized/gallery/phong-doi-dau-giuong-vom-go-fairys-house-hue-01-640.webp 640w" sizes="(max-width: 767px) calc(100vw - 2rem), (max-width: 1199px) calc((100vw - 4rem) / 2), 320px" alt="Phòng đôi vòm gỗ" style="width: 100%; height: 100%; object-fit: cover;" class="gallery-item-img" loading="lazy" decoding="async">
             <div class="gallery-item-overlay" style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.7)); padding: 1rem; color: #FFFFFF; text-align: left;">
               <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.85; font-family: var(--font-sans);">Hình ảnh bên trong phòng</span>
               <h4 style="color: #FFFFFF; margin: 0.2rem 0 0; font-size: 1rem; font-family: var(--font-serif); font-weight: 600;">Phòng đôi đầu giường vòm gỗ</h4>
             </div>
           </div>
           <div class="gallery-item-wrapper" data-category="rooms" style="position: relative; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-sm); aspect-ratio: 4/3; background-color: var(--border-light);">
-            <img src="/assets/images/rooms/phong-doi-cua-so-rem-fairys-house-hue-02.jpg" alt="Phòng đôi cửa sổ rèm" style="width: 100%; height: 100%; object-fit: cover;" class="gallery-item-img" loading="lazy">
+            <img src="/assets/images/rooms/phong-doi-cua-so-rem-fairys-house-hue-02.jpg" srcset="/assets/images/optimized/gallery/phong-doi-cua-so-rem-fairys-house-hue-02-640.webp 640w" sizes="(max-width: 767px) calc(100vw - 2rem), (max-width: 1199px) calc((100vw - 4rem) / 2), 320px" alt="Phòng đôi cửa sổ rèm" style="width: 100%; height: 100%; object-fit: cover;" class="gallery-item-img" loading="lazy" decoding="async">
             <div class="gallery-item-overlay" style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.7)); padding: 1rem; color: #FFFFFF; text-align: left;">
               <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.85; font-family: var(--font-sans);">Hình ảnh bên trong phòng</span>
               <h4 style="color: #FFFFFF; margin: 0.2rem 0 0; font-size: 1rem; font-family: var(--font-serif); font-weight: 600;">Góc cửa sổ ngập nắng</h4>
             </div>
           </div>
           <div class="gallery-item-wrapper" data-category="rooms" style="position: relative; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-sm); aspect-ratio: 4/3; background-color: var(--border-light);">
-            <img src="/assets/images/rooms/phong-doi-rattan-ban-trang-diem-fairys-house-hue-03.jpg" alt="Bàn trang điểm mây tre" style="width: 100%; height: 100%; object-fit: cover;" class="gallery-item-img" loading="lazy">
+            <img src="/assets/images/rooms/phong-doi-rattan-ban-trang-diem-fairys-house-hue-03.jpg" srcset="/assets/images/optimized/gallery/phong-doi-rattan-ban-trang-diem-fairys-house-hue-03-640.webp 640w" sizes="(max-width: 767px) calc(100vw - 2rem), (max-width: 1199px) calc((100vw - 4rem) / 2), 320px" alt="Bàn trang điểm mây tre" style="width: 100%; height: 100%; object-fit: cover;" class="gallery-item-img" loading="lazy" decoding="async">
             <div class="gallery-item-overlay" style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.7)); padding: 1rem; color: #FFFFFF; text-align: left;">
               <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.85; font-family: var(--font-sans);">Hình ảnh bên trong phòng</span>
               <h4 style="color: #FFFFFF; margin: 0.2rem 0 0; font-size: 1rem; font-family: var(--font-serif); font-weight: 600;">Bàn trang điểm mây đan</h4>
             </div>
           </div>
           <div class="gallery-item-wrapper" data-category="rooms" style="position: relative; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-sm); aspect-ratio: 4/3; background-color: var(--border-light);">
-            <img src="/assets/images/rooms/phong-doi-tuong-xanh-mint-fairys-house-hue-04.jpg" alt="Phòng đôi xanh mint" style="width: 100%; height: 100%; object-fit: cover;" class="gallery-item-img" loading="lazy">
+            <img src="/assets/images/rooms/phong-doi-tuong-xanh-mint-fairys-house-hue-04.jpg" srcset="/assets/images/optimized/gallery/phong-doi-tuong-xanh-mint-fairys-house-hue-04-640.webp 640w" sizes="(max-width: 767px) calc(100vw - 2rem), (max-width: 1199px) calc((100vw - 4rem) / 2), 320px" alt="Phòng đôi xanh mint" style="width: 100%; height: 100%; object-fit: cover;" class="gallery-item-img" loading="lazy" decoding="async">
             <div class="gallery-item-overlay" style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.7)); padding: 1rem; color: #FFFFFF; text-align: left;">
               <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.85; font-family: var(--font-sans);">Hình ảnh bên trong phòng</span>
               <h4 style="color: #FFFFFF; margin: 0.2rem 0 0; font-size: 1rem; font-family: var(--font-serif); font-weight: 600;">Tone xanh mint mát mắt</h4>
             </div>
           </div>
           <div class="gallery-item-wrapper" data-category="rooms" style="position: relative; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-sm); aspect-ratio: 4/3; background-color: var(--border-light);">
-            <img src="/assets/images/rooms/phong-doi-xanh-mint-rattan-fairys-house-hue-05.jpg" alt="Phòng đôi xanh mint và mây tre" style="width: 100%; height: 100%; object-fit: cover;" class="gallery-item-img" loading="lazy">
+            <img src="/assets/images/rooms/phong-doi-xanh-mint-rattan-fairys-house-hue-05.jpg" srcset="/assets/images/optimized/gallery/phong-doi-xanh-mint-rattan-fairys-house-hue-05-640.webp 640w" sizes="(max-width: 767px) calc(100vw - 2rem), (max-width: 1199px) calc((100vw - 4rem) / 2), 320px" alt="Phòng đôi xanh mint và mây tre" style="width: 100%; height: 100%; object-fit: cover;" class="gallery-item-img" loading="lazy" decoding="async">
             <div class="gallery-item-overlay" style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.7)); padding: 1rem; color: #FFFFFF; text-align: left;">
               <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.85; font-family: var(--font-sans);">Hình ảnh bên trong phòng</span>
               <h4 style="color: #FFFFFF; margin: 0.2rem 0 0; font-size: 1rem; font-family: var(--font-serif); font-weight: 600;">Nội thất mây tre tinh tế</h4>
             </div>
           </div>
           <div class="gallery-item-wrapper" data-category="rooms" style="position: relative; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-sm); aspect-ratio: 4/3; background-color: var(--border-light);">
-            <img src="/assets/images/rooms/phong-doi-xanh-mint-goc-rong-fairys-house-hue-06.jpg" alt="Góc rộng phòng xanh mint" style="width: 100%; height: 100%; object-fit: cover;" class="gallery-item-img" loading="lazy">
+            <img src="/assets/images/rooms/phong-doi-xanh-mint-goc-rong-fairys-house-hue-06.jpg" srcset="/assets/images/optimized/gallery/phong-doi-xanh-mint-goc-rong-fairys-house-hue-06-640.webp 640w" sizes="(max-width: 767px) calc(100vw - 2rem), (max-width: 1199px) calc((100vw - 4rem) / 2), 320px" alt="Góc rộng phòng xanh mint" style="width: 100%; height: 100%; object-fit: cover;" class="gallery-item-img" loading="lazy" decoding="async">
             <div class="gallery-item-overlay" style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.7)); padding: 1rem; color: #FFFFFF; text-align: left;">
               <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.85; font-family: var(--font-sans);">Hình ảnh bên trong phòng</span>
               <h4 style="color: #FFFFFF; margin: 0.2rem 0 0; font-size: 1rem; font-family: var(--font-serif); font-weight: 600;">Không gian rộng rãi</h4>
             </div>
           </div>
           <div class="gallery-item-wrapper" data-category="rooms" style="position: relative; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-sm); aspect-ratio: 4/3; background-color: var(--border-light);">
-            <img src="/assets/images/rooms/phong-gia-dinh-phong-cach-nhat-fairys-house-hue-01.jpg" alt="Phòng gia đình kiểu Nhật" style="width: 100%; height: 100%; object-fit: cover;" class="gallery-item-img" loading="lazy">
+            <img src="/assets/images/rooms/phong-gia-dinh-phong-cach-nhat-fairys-house-hue-01.jpg" srcset="/assets/images/optimized/gallery/phong-gia-dinh-phong-cach-nhat-fairys-house-hue-01-640.webp 640w" sizes="(max-width: 767px) calc(100vw - 2rem), (max-width: 1199px) calc((100vw - 4rem) / 2), 320px" alt="Phòng gia đình kiểu Nhật" style="width: 100%; height: 100%; object-fit: cover;" class="gallery-item-img" loading="lazy" decoding="async">
             <div class="gallery-item-overlay" style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.7)); padding: 1rem; color: #FFFFFF; text-align: left;">
               <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.85; font-family: var(--font-sans);">Hình ảnh bên trong phòng</span>
               <h4 style="color: #FFFFFF; margin: 0.2rem 0 0; font-size: 1rem; font-family: var(--font-serif); font-weight: 600;">Phòng gia đình kiểu Nhật</h4>
             </div>
           </div>
           <div class="gallery-item-wrapper" data-category="rooms" style="position: relative; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-sm); aspect-ratio: 4/3; background-color: var(--border-light);">
-            <img src="/assets/images/rooms/phong-gia-dinh-nhat-goc-rong-fairys-house-hue-02.jpg" alt="Phòng gia đình góc rộng" style="width: 100%; height: 100%; object-fit: cover;" class="gallery-item-img" loading="lazy">
+            <img src="/assets/images/rooms/phong-gia-dinh-nhat-goc-rong-fairys-house-hue-02.jpg" srcset="/assets/images/optimized/gallery/phong-gia-dinh-nhat-goc-rong-fairys-house-hue-02-640.webp 640w" sizes="(max-width: 767px) calc(100vw - 2rem), (max-width: 1199px) calc((100vw - 4rem) / 2), 320px" alt="Phòng gia đình góc rộng" style="width: 100%; height: 100%; object-fit: cover;" class="gallery-item-img" loading="lazy" decoding="async">
             <div class="gallery-item-overlay" style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.7)); padding: 1rem; color: #FFFFFF; text-align: left;">
               <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.85; font-family: var(--font-sans);">Hình ảnh bên trong phòng</span>
               <h4 style="color: #FFFFFF; margin: 0.2rem 0 0; font-size: 1rem; font-family: var(--font-serif); font-weight: 600;">Không gian sinh hoạt chung</h4>
             </div>
           </div>
           <div class="gallery-item-wrapper" data-category="rooms" style="position: relative; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-sm); aspect-ratio: 4/3; background-color: var(--border-light);">
-            <img src="/assets/images/rooms/phong-gia-dinh-nhat-cua-so-manh-fairys-house-hue-03.jpg" alt="Phòng gia đình cửa sổ mành" style="width: 100%; height: 100%; object-fit: cover;" class="gallery-item-img" loading="lazy">
+            <img src="/assets/images/rooms/phong-gia-dinh-nhat-cua-so-manh-fairys-house-hue-03.jpg" srcset="/assets/images/optimized/gallery/phong-gia-dinh-nhat-cua-so-manh-fairys-house-hue-03-640.webp 640w" sizes="(max-width: 767px) calc(100vw - 2rem), (max-width: 1199px) calc((100vw - 4rem) / 2), 320px" alt="Phòng gia đình cửa sổ mành" style="width: 100%; height: 100%; object-fit: cover;" class="gallery-item-img" loading="lazy" decoding="async">
             <div class="gallery-item-overlay" style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.7)); padding: 1rem; color: #FFFFFF; text-align: left;">
               <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.85; font-family: var(--font-sans);">Hình ảnh bên trong phòng</span>
               <h4 style="color: #FFFFFF; margin: 0.2rem 0 0; font-size: 1rem; font-family: var(--font-serif); font-weight: 600;">Cửa sổ mành tre bình yên</h4>
             </div>
           </div>
           <div class="gallery-item-wrapper" data-category="rooms" style="position: relative; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-sm); aspect-ratio: 4/3; background-color: var(--border-light);">
-            <img src="/assets/images/rooms/goc-ngoi-thap-phong-cach-nhat-fairys-house-hue-02.jpg" alt="Góc ngồi thấp kiểu Nhật" style="width: 100%; height: 100%; object-fit: cover;" class="gallery-item-img" loading="lazy">
+            <img src="/assets/images/rooms/goc-ngoi-thap-phong-cach-nhat-fairys-house-hue-02.jpg" srcset="/assets/images/optimized/gallery/goc-ngoi-thap-phong-cach-nhat-fairys-house-hue-02-640.webp 640w" sizes="(max-width: 767px) calc(100vw - 2rem), (max-width: 1199px) calc((100vw - 4rem) / 2), 320px" alt="Góc ngồi thấp kiểu Nhật" style="width: 100%; height: 100%; object-fit: cover;" class="gallery-item-img" loading="lazy" decoding="async">
             <div class="gallery-item-overlay" style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.7)); padding: 1rem; color: #FFFFFF; text-align: left;">
               <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.85; font-family: var(--font-sans);">Hình ảnh bên trong phòng</span>
               <h4 style="color: #FFFFFF; margin: 0.2rem 0 0; font-size: 1rem; font-family: var(--font-serif); font-weight: 600;">Góc ngồi trà đạo thư thái</h4>
             </div>
           </div>
           <div class="gallery-item-wrapper" data-category="rooms" style="position: relative; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-sm); aspect-ratio: 4/3; background-color: var(--border-light);">
-            <img src="/assets/images/rooms/tu-quan-ao-go-fairys-house-hue-03.jpg" alt="Tủ quần áo gỗ" style="width: 100%; height: 100%; object-fit: cover;" class="gallery-item-img" loading="lazy">
+            <img src="/assets/images/rooms/tu-quan-ao-go-fairys-house-hue-03.jpg" srcset="/assets/images/optimized/gallery/tu-quan-ao-go-fairys-house-hue-03-640.webp 640w" sizes="(max-width: 767px) calc(100vw - 2rem), (max-width: 1199px) calc((100vw - 4rem) / 2), 320px" alt="Tủ quần áo gỗ" style="width: 100%; height: 100%; object-fit: cover;" class="gallery-item-img" loading="lazy" decoding="async">
             <div class="gallery-item-overlay" style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.7)); padding: 1rem; color: #FFFFFF; text-align: left;">
               <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.85; font-family: var(--font-sans);">Hình ảnh bên trong phòng</span>
               <h4 style="color: #FFFFFF; margin: 0.2rem 0 0; font-size: 1rem; font-family: var(--font-serif); font-weight: 600;">Tủ quần áo gỗ mộc mạc</h4>
             </div>
           </div>
           <div class="gallery-item-wrapper" data-category="rooms" style="position: relative; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-sm); aspect-ratio: 4/3; background-color: var(--border-light);">
-            <img src="/assets/images/rooms/ke-tien-ich-am-dun-fairys-house-hue-04.jpg" alt="Kệ tiện ích và ấm đun" style="width: 100%; height: 100%; object-fit: cover;" class="gallery-item-img" loading="lazy">
+            <img src="/assets/images/rooms/ke-tien-ich-am-dun-fairys-house-hue-04.jpg" srcset="/assets/images/optimized/gallery/ke-tien-ich-am-dun-fairys-house-hue-04-640.webp 640w" sizes="(max-width: 767px) calc(100vw - 2rem), (max-width: 1199px) calc((100vw - 4rem) / 2), 320px" alt="Kệ tiện ích và ấm đun" style="width: 100%; height: 100%; object-fit: cover;" class="gallery-item-img" loading="lazy" decoding="async">
             <div class="gallery-item-overlay" style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.7)); padding: 1rem; color: #FFFFFF; text-align: left;">
               <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.85; font-family: var(--font-sans);">Hình ảnh bên trong phòng</span>
               <h4 style="color: #FFFFFF; margin: 0.2rem 0 0; font-size: 1rem; font-family: var(--font-serif); font-weight: 600;">Góc tiện ích gọn gàng</h4>
             </div>
           </div>
           <div class="gallery-item-wrapper" data-category="rooms" style="position: relative; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-sm); aspect-ratio: 4/3; background-color: var(--border-light);">
-            <img src="/assets/images/rooms/tien-ich-nuoc-uong-cafe-fairys-house-hue-01.jpg" alt="Tiện ích nước uống và cafe" style="width: 100%; height: 100%; object-fit: cover;" class="gallery-item-img" loading="lazy">
+            <img src="/assets/images/rooms/tien-ich-nuoc-uong-cafe-fairys-house-hue-01.jpg" srcset="/assets/images/optimized/gallery/tien-ich-nuoc-uong-cafe-fairys-house-hue-01-640.webp 640w" sizes="(max-width: 767px) calc(100vw - 2rem), (max-width: 1199px) calc((100vw - 4rem) / 2), 320px" alt="Tiện ích nước uống và cafe" style="width: 100%; height: 100%; object-fit: cover;" class="gallery-item-img" loading="lazy" decoding="async">
             <div class="gallery-item-overlay" style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.7)); padding: 1rem; color: #FFFFFF; text-align: left;">
               <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.85; font-family: var(--font-sans);">Hình ảnh bên trong phòng</span>
               <h4 style="color: #FFFFFF; margin: 0.2rem 0 0; font-size: 1rem; font-family: var(--font-serif); font-weight: 600;">Tiện ích trà cà phê</h4>
             </div>
           </div>
           <div class="gallery-item-wrapper" data-category="rooms" style="position: relative; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-sm); aspect-ratio: 4/3; background-color: var(--border-light);">
-            <img src="/assets/images/rooms/lavabo-guong-phong-tam-fairys-house-hue-01.jpg" alt="Lavabo và gương phòng tắm" style="width: 100%; height: 100%; object-fit: cover;" class="gallery-item-img" loading="lazy">
+            <img src="/assets/images/rooms/lavabo-guong-phong-tam-fairys-house-hue-01.jpg" srcset="/assets/images/optimized/gallery/lavabo-guong-phong-tam-fairys-house-hue-01-640.webp 640w" sizes="(max-width: 767px) calc(100vw - 2rem), (max-width: 1199px) calc((100vw - 4rem) / 2), 320px" alt="Lavabo và gương phòng tắm" style="width: 100%; height: 100%; object-fit: cover;" class="gallery-item-img" loading="lazy" decoding="async">
             <div class="gallery-item-overlay" style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.7)); padding: 1rem; color: #FFFFFF; text-align: left;">
               <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.85; font-family: var(--font-sans);">Hình ảnh bên trong phòng</span>
               <h4 style="color: #FFFFFF; margin: 0.2rem 0 0; font-size: 1rem; font-family: var(--font-serif); font-weight: 600;">Phòng tắm khép kín hiện đại</h4>
