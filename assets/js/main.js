@@ -263,98 +263,78 @@ document.addEventListener('DOMContentLoaded', () => {
     };
   }
 
-  function getActivitySuggestion(temp, code, isEn) {
-    const isRainy = (code >= 51 && code <= 69) || (code >= 80 && code <= 99);
+  function ensureHeaderWeatherTicker() {
+    const header = document.querySelector('.header');
+    if (!header) return null;
 
-    if (isRainy) {
-      if (temp < 24) {
-        // Cold or cool rain (typical winter/spring drizzle or late autumn)
-        return isEn 
-          ? "Hue is embracing its poetic signature drizzle. It's a perfect time to admire the Imperial City shrouded in mist, escape the chill with a hot 'Salt Coffee', or visit the warm Imperial Antiquities Museum."
-          : "Huế đang đón những cơn mưa thơ mộng đặc sản. Đây là dịp tuyệt hảo để ngắm Kinh thành trong màn mưa mờ ảo, trốn cái se lạnh thưởng thức ly Cafe Muối ấm nồng hoặc tham quan Bảo tàng Cổ vật Cung đình.";
-      } else {
-        // Warm/hot rain (typical summer shower or thunderstorm)
-        return isEn 
-          ? "Hue is enjoying a refreshing summer rain shower. It's the perfect occasion to visit cozy local cafes, enjoy a refreshing iced 'Salt Coffee', or explore indoor heritage sites like the beautiful An Dinh Palace."
-          : "Huế đang đón những cơn mưa rào đặc trưng làm dịu đi khí hậu mùa hè. Đây là dịp tuyệt hảo để bạn ghé các quán Cafe rợp mát nhâm nhi ly Cafe Muối đá sảng khoái, hoặc dạo bước tham quan các di tích trong nhà mát mẻ như Cung An Định, Bảo tàng Cổ vật.";
-      }
-    }
+    const existingTicker = header.querySelector('.weather-ticker');
+    if (existingTicker) return existingTicker;
 
-    // Sunny / Dry conditions
-    if (temp >= 32) {
-      // Hot summer day
-      return isEn
-        ? "The summer sun is quite intense today. To stay comfortable, we highly recommend visiting the Imperial Citadel or Pagodas early in the morning (before 9:00 AM) or enjoying the cool beach breeze at Thuan An in the late afternoon. Spend your midday relaxing with a refreshing bowl of sweet 'Che Hem'."
-        : "Trời nắng nóng mùa hè khá gay gắt. Để chuyến đi thoải mái nhất, bạn nên tham quan di tích ngoài trời vào sáng sớm (trước 9h00) hoặc dạo mát biển Thuận An, ngắm cầu Tràng Tiền vào chiều muộn; buổi trưa hãy nghỉ mát và thưởng thức chè hẻm ngọt mát.";
-    }
+    const isEn = window.location.pathname.includes('/en/');
+    const ticker = document.createElement('div');
+    ticker.className = 'weather-ticker';
+    ticker.setAttribute('role', 'status');
+    ticker.setAttribute('aria-live', 'polite');
 
-    if (temp < 22) {
-      // Cool/cold dry day
-      return isEn
-        ? "A wonderfully crisp and cool day! It is ideal for strolling around the historic Citadel, warming up with a piping-hot bowl of Bun Bo Hue, and relaxing over a cup of hot Royal Herbal Tea."
-        : "Trời se lạnh và khô ráo tuyệt vời! Thích hợp nhất để thong thả dạo bước quanh khu Đại Nội cổ kính, xì xụp bát bún bò Huế nóng hổi đậm đà và sưởi ấm bên tách trà cung đình thơm nhẹ.";
-    }
+    const loadingText = isEn
+      ? 'Checking Hue weather for today...'
+      : 'Đang cập nhật thời tiết Huế hôm nay...';
 
-    // Mild/comfortable day (22 to < 32)
-    return isEn
-      ? "The weather is lovely, mild and breezy! It is a perfect day to rent a bicycle to tour the leafy streets, explore the tranquil Thien Mu pagoda, or enjoy a sunset dragon boat cruise on the Perfume River."
-      : "Thời tiết ôn hòa hiền dịu, tuyệt đẹp để bạn thong thả tham quan Đại Nội, tản bộ ven dòng sông Hương rợp bóng cây hoặc đón hoàng hôn trên sông Hương thơ mộng.";
+    ticker.innerHTML = `
+      <div class="weather-ticker__viewport">
+        <div class="weather-ticker__track">
+          <span class="weather-ticker__text"></span>
+          <span class="weather-ticker__text" aria-hidden="true"></span>
+        </div>
+      </div>
+    `;
+
+    ticker.querySelectorAll('.weather-ticker__text').forEach(item => {
+      item.textContent = loadingText;
+    });
+
+    header.appendChild(ticker);
+    return ticker;
   }
 
-  function updateWeatherWidget(data) {
+  function updateHeaderWeatherTicker(data) {
+    const ticker = document.querySelector('.weather-ticker');
+    if (!ticker || !data.current) return;
+
     const isEn = window.location.pathname.includes('/en/');
     const current = data.current;
     const codeInfo = weatherCodes[current.weather_code] || { vi: 'Ôn hòa', en: 'Mild', emoji: '⛅' };
-    
-    const iconEl = document.getElementById('weather-icon-main');
-    const tempEl = document.getElementById('weather-temp-main');
-    const descEl = document.getElementById('weather-desc-main');
-    const timeEl = document.getElementById('weather-time-main');
-    const sugEl = document.getElementById('weather-suggestion');
-    const feelsEl = document.getElementById('weather-feels-like');
-    const humEl = document.getElementById('weather-humidity');
-    const windEl = document.getElementById('weather-wind');
-    const forecastContainer = document.getElementById('weather-forecast-container');
-    
-    if (iconEl) iconEl.innerHTML = `<span>${codeInfo.emoji}</span>`;
-    if (tempEl) tempEl.innerText = `${Math.round(current.temperature_2m)}°C`;
-    if (descEl) descEl.innerText = isEn ? codeInfo.en : codeInfo.vi;
-    
-    const now = new Date();
-    const pad = (n) => n < 10 ? '0' + n : n;
-    const timeStr = `${pad(now.getHours())}:${pad(now.getMinutes())}`;
-    if (timeEl) timeEl.innerText = isEn ? `Updated at ${timeStr}` : `Cập nhật lúc ${timeStr}`;
-    
-    if (sugEl) sugEl.innerText = getActivitySuggestion(current.temperature_2m, current.weather_code, isEn);
-    if (feelsEl) feelsEl.innerText = `${Math.round(current.apparent_temperature)}°C`;
-    if (humEl) humEl.innerText = `${current.relative_humidity_2m}%`;
-    if (windEl) windEl.innerText = `${Math.round(current.wind_speed_10m)} km/h`;
-    
-    if (forecastContainer && data.daily) {
-      forecastContainer.innerHTML = '';
-      const days = data.daily.time;
-      for (let i = 0; i < Math.min(days.length, 5); i++) {
-        const dateObj = new Date(days[i]);
+    const temp = Math.round(current.temperature_2m);
+    const feels = Math.round(current.apparent_temperature);
+    const humidity = Math.round(current.relative_humidity_2m);
+    const wind = Math.round(current.wind_speed_10m);
+
+    let forecastText = '';
+    if (data.daily && Array.isArray(data.daily.time)) {
+      const forecastParts = data.daily.time.slice(0, 3).map((day, index) => {
+        const dateObj = new Date(day);
         const dayName = isEn ? shortDaysEn[dateObj.getDay()] : shortDaysVi[dateObj.getDay()];
-        const code = data.daily.weather_code[i];
-        const dCodeInfo = weatherCodes[code] || { vi: 'Ôn hòa', en: 'Mild', emoji: '⛅' };
-        const maxT = Math.round(data.daily.temperature_2m_max[i]);
-        const minT = Math.round(data.daily.temperature_2m_min[i]);
-        
-        const cardHtml = `
-          <div class="forecast-item" style="opacity: 1;">
-            <div style="font-size: 0.82rem; color: var(--color-primary-dark); font-weight: 700; text-transform: uppercase;">${dayName}</div>
-            <div style="font-size: 1.6rem; margin: 0.25rem 0;" title="${isEn ? dCodeInfo.en : dCodeInfo.vi}">${dCodeInfo.emoji}</div>
-            <div style="font-size: 0.78rem; font-weight: 600; color: var(--text-main);">${maxT}° / ${minT}°</div>
-          </div>
-        `;
-        forecastContainer.insertAdjacentHTML('beforeend', cardHtml);
-      }
+        const maxT = Math.round(data.daily.temperature_2m_max[index]);
+        const minT = Math.round(data.daily.temperature_2m_min[index]);
+        const dayCode = data.daily.weather_code[index];
+        const dayInfo = weatherCodes[dayCode] || { vi: 'Ôn hòa', en: 'Mild', emoji: '⛅' };
+        return `${dayName} ${dayInfo.emoji} ${maxT}/${minT}°`;
+      }).join('  •  ');
+
+      forecastText = forecastParts ? `  •  ${forecastParts}` : '';
     }
+
+    const message = isEn
+      ? `Hue now ${codeInfo.emoji} ${temp}°C, feels ${feels}°C, humidity ${humidity}%, wind ${wind} km/h${forecastText}`
+      : `Thời tiết Huế ${codeInfo.emoji} ${temp}°C, cảm giác ${feels}°C, độ ẩm ${humidity}%, gió ${wind} km/h${forecastText}`;
+
+    ticker.querySelectorAll('.weather-ticker__text').forEach(item => {
+      item.textContent = message;
+    });
   }
 
-  const weatherWidgetTrigger = document.getElementById('weather-temp-main');
-  if (weatherWidgetTrigger) {
+  const headerWeatherTicker = ensureHeaderWeatherTicker();
+  if (headerWeatherTicker) {
     const lat = 16.4637;
     const lon = 107.5908;
     const apiUrl = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,relative_humidity_2m,apparent_temperature,weather_code,wind_speed_10m&daily=weather_code,temperature_2m_max,temperature_2m_min&timezone=Asia/Bangkok`;
@@ -366,12 +346,12 @@ document.addEventListener('DOMContentLoaded', () => {
           return res.json();
         })
         .then(data => {
-          updateWeatherWidget(data);
+          updateHeaderWeatherTicker(data);
         })
         .catch(err => {
           console.warn('Weather fallback logic triggered:', err);
           const fallback = getFallbackData();
-          updateWeatherWidget(fallback);
+          updateHeaderWeatherTicker(fallback);
         });
     };
 
@@ -393,7 +373,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // 6. Modern Scroll Reveal Engine (IntersectionObserver)
   const initScrollReveal = () => {
     // Select elements to reveal
-    const revealSections = document.querySelectorAll('.about-block__img, .about-block__content, .map-embed, .map-info, .weather-widget-container, .testimonial-slider-wrapper');
+    const revealSections = document.querySelectorAll('.about-block__img, .about-block__content, .map-embed, .map-info, .testimonial-slider-wrapper');
     const revealStaggers = document.querySelectorAll('.grid-3 .card, .features-grid .feature-box, .about-block__list-item');
 
     // Setup initial state dynamically so it degrades gracefully if JS is disabled
@@ -453,7 +433,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollReveal();
   } else {
     // Fail-safe fallback: instantly show all elements if observer is unsupported
-    document.querySelectorAll('.about-block__img, .about-block__content, .map-embed, .map-info, .weather-widget-container, .testimonial-slider-wrapper').forEach(el => {
+    document.querySelectorAll('.about-block__img, .about-block__content, .map-embed, .map-info, .testimonial-slider-wrapper').forEach(el => {
       el.style.opacity = '1';
       el.style.transform = 'none';
     });
