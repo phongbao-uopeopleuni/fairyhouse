@@ -604,6 +604,48 @@ p {
   color: var(--text-muted);
 }
 
+.policy-section .container {
+  max-width: 980px;
+}
+
+.policy-section .section__title {
+  margin-bottom: 1.25rem !important;
+}
+
+.policy-section .grid-2,
+.policy-section .features-grid--policy {
+  gap: 1rem;
+}
+
+.policy-section .feature-box {
+  padding: 1.15rem 1.25rem;
+  box-shadow: 0 10px 24px rgba(44, 31, 29, 0.08);
+}
+
+.policy-section .feature-box__title {
+  margin-bottom: 0.55rem;
+  font-size: 1.02rem !important;
+}
+
+.policy-section .feature-box__desc,
+.policy-section .policy-list {
+  font-size: 0.88rem !important;
+  line-height: 1.55;
+}
+
+.policy-section .policy-list {
+  list-style: none;
+  margin-top: 0.7rem;
+}
+
+.policy-section .policy-list li {
+  margin-bottom: 0.35rem !important;
+}
+
+.policy-section .policy-list li:last-child {
+  margin-bottom: 0 !important;
+}
+
 /* About homestay intro block */
 .about-block {
   display: grid;
