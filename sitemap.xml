@@ -1,80 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
   <!-- Trang chủ -->
   <url>
-    <loc>https://www.fairyshousehue.vn/index.html</loc>
-    <lastmod>2026-06-05</lastmod>
+    <loc>https://www.fairyshousehue.com/</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.fairyshousehue.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.fairyshousehue.com/en/"/>
+    <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  <!-- Trang giới thiệu -->
+
+  <!-- Landing page Google Ads -->
   <url>
-    <loc>https://www.fairyshousehue.vn/gioi-thieu.html</loc>
-    <lastmod>2026-06-05</lastmod>
+    <loc>https://www.fairyshousehue.com/homestay-hue.html</loc>
+    <lastmod>2026-06-13</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.95</priority>
   </url>
+
   <!-- Trang danh sách phòng -->
   <url>
-    <loc>https://www.fairyshousehue.vn/phong.html</loc>
-    <lastmod>2026-06-05</lastmod>
+    <loc>https://www.fairyshousehue.com/phong.html</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.fairyshousehue.com/phong.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.fairyshousehue.com/en/phong.html"/>
+    <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-  <!-- Trang chi tiết phòng đôi ấm cúng -->
+
+  <!-- Trang giới thiệu -->
   <url>
-    <loc>https://www.fairyshousehue.vn/phong/phong-doi-am-cung.html</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://www.fairyshousehue.com/gioi-thieu.html</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.fairyshousehue.com/gioi-thieu.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.fairyshousehue.com/en/gioi-thieu.html"/>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Trang chi tiết phòng King 1 -->
+  <url>
+    <loc>https://www.fairyshousehue.com/phong/phong-doi-am-cung.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
-  <!-- Trang chi tiết phòng gia đình rộng rãi -->
+
+  <!-- Trang chi tiết phòng gia đình (Super King) -->
   <url>
-    <loc>https://www.fairyshousehue.vn/phong/phong-gia-dinh.html</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://www.fairyshousehue.com/phong/phong-gia-dinh.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
-  <!-- Trang chi tiết phòng nhóm bạn thân -->
+
+  <!-- Trang chi tiết phòng nhóm bạn (Super King 2) -->
   <url>
-    <loc>https://www.fairyshousehue.vn/phong/phong-nhom-ban.html</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://www.fairyshousehue.com/phong/phong-nhom-ban.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
-  <!-- Trang cẩm nang du lịch -->
+
+  <!-- Trang cẩm nang du lịch Huế -->
   <url>
-    <loc>https://www.fairyshousehue.vn/cam-nang-hue.html</loc>
-    <lastmod>2026-06-05</lastmod>
+    <loc>https://www.fairyshousehue.com/cam-nang-hue.html</loc>
+    <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  <!-- Trang bài viết: địa điểm gần homestay -->
+
+  <!-- Bài viết: địa điểm du lịch gần Fairy's House Huế -->
   <url>
-    <loc>https://www.fairyshousehue.vn/bai-viet/dia-diem-du-lich-gan-fairys-house-hue.html</loc>
-    <lastmod>2026-06-05</lastmod>
+    <loc>https://www.fairyshousehue.com/bai-viet/dia-diem-du-lich-gan-fairys-house-hue.html</loc>
+    <lastmod>2026-06-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
-  <!-- Trang bài viết: ăn gì ở huế -->
+
+  <!-- Bài viết: ăn gì ở Huế -->
   <url>
-    <loc>https://www.fairyshousehue.vn/bai-viet/an-gi-o-hue.html</loc>
-    <lastmod>2026-06-05</lastmod>
+    <loc>https://www.fairyshousehue.com/bai-viet/an-gi-o-hue.html</loc>
+    <lastmod>2026-06-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
-  <!-- Trang bài viết: kinh nghiệm đặt homestay -->
+
+  <!-- Bài viết: kinh nghiệm đặt homestay ở Huế -->
   <url>
-    <loc>https://www.fairyshousehue.vn/bai-viet/kinh-nghiem-dat-homestay-o-hue.html</loc>
-    <lastmod>2026-06-05</lastmod>
+    <loc>https://www.fairyshousehue.com/bai-viet/kinh-nghiem-dat-homestay-o-hue.html</loc>
+    <lastmod>2026-06-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
-  <!-- Trang liên hệ -->
+
+  <!-- Bài viết: top địa điểm ăn uống Google Review Huế -->
   <url>
-    <loc>https://www.fairyshousehue.vn/lien-he.html</loc>
-    <lastmod>2026-06-05</lastmod>
+    <loc>https://www.fairyshousehue.com/bai-viet/top-dia-diem-an-uong-google-review-hue.html</loc>
+    <lastmod>2026-06-13</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.75</priority>
   </url>
+
+  <!-- Bài viết: top quán cà phê muối và đẹp ở Huế -->
+  <url>
+    <loc>https://www.fairyshousehue.com/bai-viet/top-quan-ca-phe-muoi-va-dep-o-hue.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
 </urlset>

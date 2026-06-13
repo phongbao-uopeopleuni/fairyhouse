@@ -22,6 +22,7 @@ export default defineConfig(() => {
       rollupOptions: {
         input: {
           main: path.resolve(__dirname, 'index.html'),
+          homestay_hue: path.resolve(__dirname, 'homestay-hue.html'),
           gioi_thieu: path.resolve(__dirname, 'gioi-thieu.html'),
           phong: path.resolve(__dirname, 'phong.html'),
           phong_doi_am_cung: path.resolve(__dirname, 'phong/phong-doi-am-cung.html'),
